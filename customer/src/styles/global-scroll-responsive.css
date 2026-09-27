@@ -1,0 +1,86 @@
+
+/* D2Cabs: global scroll + responsive safety layer.
+   Loaded last so legacy page styles cannot accidentally lock the document. */
+
+html {
+  min-height: 100%;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+  height: auto !important;
+}
+
+body {
+  min-height: 100%;
+  height: auto !important;
+  margin: 0;
+  overflow-y: auto !important;
+  overflow-x: hidden !important;
+}
+
+#root {
+  min-height: 100vh;
+  height: auto !important;
+  overflow: visible !important;
+}
+
+#root > * {
+  min-height: 100%;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+/* Remove common legacy full-page scroll locks, while preserving modal
+   internals where scrolling is intentionally needed. */
+body.no-scroll,
+body.modal-open,
+body.menu-open {
+  overflow-y: auto !important;
+}
+
+.page,
+.page-container,
+.main,
+main,
+.app,
+.app-container,
+.content,
+.content-wrapper {
+  min-height: 0;
+  height: auto;
+}
+
+@media (min-width: 760px) {
+  .phone {
+    width: 100% !important;
+    max-width: none !important;
+    min-height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .phone * {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 759px) {
+  .phone {
+    width: 100%;
+    max-width: 430px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Fixed/sticky headers stay visible without becoming the scroll container. */
+header, .header, .site-header, .topbar, .navbar {
+  max-width: 100% !important;
+}
+
+/* Never clip the page itself. */
+body > div,
+#root {
+  overflow: visible !important;
+}

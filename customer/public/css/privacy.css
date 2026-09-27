@@ -1,0 +1,2310 @@
+:root{--brand:#123A5C;--brand-dark:#0B2A44;--muted:#5B7285;--light-blue:#DCEEFB;--field-bg:#F5F7FA;--field-border:#E4E9EF}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0;width:100%;font-family:-apple-system,BlinkMacSystemFont,"SF Pro Display","Segoe UI",sans-serif;color:var(--brand);background:#fff;overscroll-behavior-y:none}
+.faq-page{width:100%;overflow:hidden}
+.header{width:100%!important;margin:0!important}
+.faq-hero{min-height:255px;padding:28px 18px;display:flex;align-items:flex-end;position:relative;overflow:hidden;color:#fff;background-image:linear-gradient(rgba(11,42,68,.64),rgba(11,42,68,.72)),url(../images/img_c101.jpg);background-size:cover;background-position:center 38%;background-repeat:no-repeat;}
+.faq-hero:before{content:"";position:absolute;width:250px;height:250px;border:1px solid rgba(255,255,255,.16);border-radius:50%;right:-85px;top:-85px}
+.faq-hero:after{content:"";position:absolute;width:145px;height:145px;border:1px solid rgba(255,255,255,.13);border-radius:50%;right:55px;bottom:-95px}
+.faq-content{position:relative;z-index:2}
+.eyebrow{font-size:.58rem;letter-spacing:1.3px;font-weight:850;opacity:.82}
+.faq-hero h1{margin:8px 0 9px;font-size:2rem;line-height:1.03;letter-spacing:-.8px;font-weight:900}
+.faq-hero h1 span{color:#BFE2F7}
+.faq-hero p{margin:0;color:#DCEBF4;font-size:.72rem;line-height:1.45;max-width:310px}
+.faq-main{padding:27px 14px 45px}
+.title-row{display:flex;align-items:center;justify-content:center;gap:9px;margin-bottom:17px}
+.title-row i{height:2px;width:40px;background:var(--brand);border-radius:99px}
+.title-row h2{margin:0;font-size:1.4rem;line-height:1;font-weight:900;letter-spacing:-.4px}
+.search{height:47px;display:flex;align-items:center;gap:10px;padding:0 14px;border:1px solid var(--field-border);border-radius:15px;background:var(--field-bg)}
+.search svg{width:18px;height:18px;fill:none;stroke:#6D8292;stroke-width:2}
+.search input{border:0;outline:0;background:transparent;width:100%;font:600 .72rem inherit;color:var(--brand)}
+.search input::placeholder{color:#8BA0AF}
+.tabs{display:flex;gap:7px;overflow:auto;padding:12px 0 15px;scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tab{border:1px solid var(--field-border);background:#fff;color:var(--muted);padding:7px 12px;border-radius:999px;font-size:.6rem;font-weight:800;white-space:nowrap}
+.tab.active{background:var(--brand);border-color:var(--brand);color:#fff}
+.faq-list{border:1px solid var(--field-border);border-radius:19px;overflow:hidden;background:#fff;box-shadow:0 7px 20px rgba(18,58,92,.05)}
+.faq-list details+details{border-top:1px solid #E7EDF1}
+.faq-list summary{list-style:none;position:relative;cursor:pointer;padding:16px 48px 16px 15px;font-size:.72rem;line-height:1.3;font-weight:850}
+.faq-list summary::-webkit-details-marker{display:none}
+.faq-list summary:after{content:"+";position:absolute;right:14px;top:50%;transform:translateY(-50%);width:25px;height:25px;border-radius:50%;display:grid;place-items:center;background:#EDF4F8;color:var(--brand);font-size:17px}
+.faq-list details[open] summary:after{content:"−"}
+.faq-list p{margin:-2px 15px 16px;color:#647B8D;font-size:.67rem;line-height:1.55}
+
+.help-section{
+  margin:34px -16px 0;
+  padding:30px 16px 34px;
+  background:linear-gradient(180deg,#eef7fc 0%,#f7fbfe 100%);
+  border-top:1px solid #dcebf5;
+  border-bottom:1px solid #dcebf5;
+}
+.help-heading{display:flex;align-items:center;justify-content:center;gap:10px}
+.help-heading h2{
+  margin:0;text-align:center;color:var(--brand);
+  font-size:1.42rem;line-height:1.1;font-weight:900;letter-spacing:-.02em
+}
+.help-line{width:30px;height:2px;background:#9fc9e4;border-radius:2px}
+.help-subtitle{
+  margin:8px auto 19px;max-width:315px;text-align:center;
+  color:#5b7285;font-size:.68rem;line-height:1.5
+}
+.help-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+.help-card{
+  min-width:0;
+  background:linear-gradient(145deg,#123a5c 0%,#0b2a44 100%);
+  border:1px solid rgba(255,255,255,.13);
+  border-radius:15px;
+  padding:16px 8px 13px;
+  text-align:center;
+  box-shadow:0 10px 24px rgba(11,42,68,.16);
+}
+.help-icon{
+  width:38px;height:38px;margin:0 auto 10px;
+  background:#dceffc;border-radius:10px;display:grid;place-items:center;
+  box-shadow:0 4px 10px rgba(0,0,0,.12)
+}
+.help-icon svg{
+  width:19px;height:19px;fill:none;stroke:#123a5c;
+  stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round
+}
+.help-card h3{
+  margin:0 0 5px;color:#fff;font-size:.72rem;font-weight:900;
+  letter-spacing:.01em
+}
+.help-card p{
+  margin:0 auto 11px;color:rgba(255,255,255,.76);
+  font-size:.56rem;line-height:1.4;min-height:31px
+}
+.help-btn{
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:29px;padding:0 9px;border:1px solid rgba(255,255,255,.28);
+  border-radius:7px;background:#fff;color:#123a5c;text-decoration:none;
+  font:900 .49rem/1 Arial,sans-serif;letter-spacing:.05em;cursor:pointer;
+  box-shadow:0 3px 8px rgba(0,0,0,.1)
+}
+.help-btn:active{transform:translateY(1px)}
+@media(max-width:390px){
+  .help-section{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}
+  .help-cards{gap:6px}
+  .help-card{padding-left:6px;padding-right:6px}
+  .help-card h3{font-size:.66rem}
+  .help-card p{font-size:.52rem}
+}
+
+/* ---- next style block ---- */
+
+html,body{background:#0b2a44 !important}
+body{color:#123a5c !important}
+.faq-page{
+  min-height:100vh;
+  background:
+    radial-gradient(circle at 82% 8%,rgba(95,157,198,.22),transparent 27%),
+    linear-gradient(180deg,#0b2a44 0 26%,#123a5c 26% 31%,#eef6fb 31% 100%) !important;
+}
+.faq-main{
+  background:linear-gradient(180deg,#f7fbfe 0%,#eef6fb 100%) !important;
+  padding-top:28px !important;
+  padding-bottom:32px !important;
+}
+.faq-hero{
+  background-image:linear-gradient(120deg,rgba(11,42,68,.80) 0%,rgba(18,58,92,.58) 48%,rgba(11,42,68,.72) 100%),url(../images/img_c101.jpg) !important;
+  background-size:cover !important;
+  background-position:center 38% !important;
+  background-repeat:no-repeat !important;
+}
+.faq-hero .faq-content h1,
+.faq-hero .faq-content p,
+.faq-hero .eyebrow{color:#fff !important}
+
+/* Reference-style FAQ heading */
+.title-row{
+  margin-bottom:20px !important;
+}
+.title-row h2{
+  color:#123a5c !important;
+  font-size:1.35rem !important;
+  font-weight:900 !important;
+  letter-spacing:-.025em !important;
+}
+.title-row i{
+  background:#123a5c !important;
+}
+
+/* White FAQ card on soft-blue page */
+.faq-list{
+  background:#fff !important;
+  border:1px solid #d4e1eb !important;
+  border-radius:24px !important;
+  box-shadow:0 12px 30px rgba(18,58,92,.12) !important;
+}
+.faq-list details{
+  background:#fff !important;
+  border-bottom:1px solid #d9e4ec !important;
+}
+.faq-list details[open]{
+  background:#f3f9fd !important;
+}
+.faq-list details summary{
+  min-height:74px !important;
+  padding:16px 18px 16px 20px !important;
+  color:#173b5e !important;
+  font-size:.79rem !important;
+  font-weight:850 !important;
+}
+.faq-list details summary::after{
+  flex-basis:32px !important;
+  width:32px !important;
+  height:32px !important;
+  margin-left:12px !important;
+  background:#edf5fa !important;
+  color:#123a5c !important;
+  box-shadow:0 4px 10px rgba(18,58,92,.08) !important;
+}
+.faq-list details[open] summary::after{
+  background:#123a5c !important;
+  color:#fff !important;
+}
+.faq-list details > p,
+.faq-list details > div{
+  background:#f3f9fd !important;
+  padding:14px 20px 18px !important;
+  color:#526b7e !important;
+  font-size:.69rem !important;
+  line-height:1.55 !important;
+}
+
+/* Make Need More Help flow naturally from the reference page */
+.help-section{
+  margin-left:-16px !important;
+  margin-right:-16px !important;
+  margin-bottom:-32px !important;
+  background:#123a5c !important;
+  border-top:0 !important;
+  border-bottom:0 !important;
+  padding-top:30px !important;
+}
+.help-heading h2{color:#fff !important}
+.help-line{background:#8ebbd7 !important}
+.help-subtitle{color:rgba(255,255,255,.75) !important}
+.help-card{
+  background:#0b2a44 !important;
+  border-color:rgba(255,255,255,.14) !important;
+}
+
+/* Reference-style bottom quick actions */
+.d2-sticky{
+  background:rgba(255,255,255,.94) !important;
+  border:1px solid #d6e4ed !important;
+  box-shadow:0 -8px 24px rgba(11,42,68,.18) !important;
+  backdrop-filter:blur(10px);
+}
+.d2-sticky a,.d2-sticky button{
+  border-radius:16px !important;
+}
+
+/* Footer should remain navy and visually connected */
+.d2-footer{
+  background:#0b2a44 !important;
+  margin-top:0 !important;
+}
+
+/* ---- next style block ---- */
+
+html,body,.faq-page,#d2Homepage{background:#f6f6f5!important;background-image:linear-gradient(180deg,#fafafa 0%,#f3f4f4 100%)!important}
+#d2Homepage{padding:0 14px 92px;color:#123A5C}
+.d2-section{margin:28px 0 0}
+.d2-panel{background:#fff;border:1px solid #dfe7ed;border-radius:22px;box-shadow:0 8px 24px rgba(18,58,92,.07)}
+.d2-heading{display:flex;align-items:center;justify-content:center;gap:4px;margin:0 0 14px;font-size:1.08rem;font-weight:850;letter-spacing:-.2px;text-align:center;color:#123A5C!important}
+.d2-heading:before,.d2-heading:after{content:"";flex:0 0 60px;width:60px;height:10px;background:#123A5C!important;filter:none!important;opacity:1!important;-webkit-mask:url(../images/img_007.svg) center/contain no-repeat!important;mask:url(../images/img_007.svg) center/contain no-repeat!important}
+.d2-heading:before{transform:none!important}.d2-heading:after{transform:scaleX(-1)!important}
+.d2-faq{overflow:hidden!important;background:linear-gradient(180deg,#fff 0%,#f8fbfd 100%)!important;border:1px solid #d7e2ea!important;border-radius:18px!important;box-shadow:0 14px 30px rgba(18,58,92,.13),0 3px 8px rgba(18,58,92,.06),inset 0 1px 0 rgba(255,255,255,.98)!important}
+.d2-faq details{background:linear-gradient(180deg,#fff 0%,#fbfdfe 100%)!important}
+.d2-faq details+details{border-top:1px solid #dbe5ec!important}
+.d2-faq summary{list-style:none;padding:16px 44px 16px 16px;font-size:.82rem;font-weight:800;line-height:1.35;position:relative;cursor:pointer;background:transparent!important}
+.d2-faq summary::-webkit-details-marker{display:none}
+.d2-faq summary:after{content:"+";position:absolute;right:16px;top:50%;transform:translateY(-50%);width:32px;height:32px;border-radius:50%;background:#edf4f8;display:grid;place-items:center;font-size:21px;color:#123A5C;line-height:1}
+.d2-faq details[open] summary:after{content:"−"}
+.d2-faq p{margin:-2px 16px 16px;padding-top:13px;border-top:0;color:#647b8d;font-size:.74rem;line-height:1.55}
+.d2-final{background:#123A5C!important;color:#fff!important;border-radius:28px!important;padding:42px 24px!important;text-align:center;box-shadow:0 14px 32px rgba(18,58,92,.18)!important;border:0!important}
+.d2-final h3{margin:0 0 8px;font-size:1.35rem;font-weight:900;color:#fff!important}.d2-final p{margin:0 auto 17px;max-width:340px;color:#dce9f1;font-size:.78rem;line-height:1.5}.d2-final button{border:0;border-radius:12px;background:#fff;color:#123A5C;padding:12px 22px;font:850 .78rem inherit;cursor:pointer}
+.d2-footer{margin:28px -14px -92px;padding:30px 20px 105px;background:#0b2a44;color:#fff}.d2-footer-brand{font-size:1.55rem;font-weight:900;margin-bottom:5px}.d2-footer-links{display:grid;grid-template-columns:1fr 1fr;gap:12px 22px;margin:20px 0 26px}.d2-footer-links button{border:0;background:transparent;color:#e9f1f6;padding:0;text-align:left;font:650 .78rem inherit;cursor:pointer}.d2-footer-contact{display:grid;gap:11px;margin:16px 0 20px}.d2-footer-contact a,.d2-address{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none}.d2-footer-contact a>span:last-child,.d2-address>span:last-child{font-size:.72rem;color:#fff;line-height:1.35;font-weight:600}.contact-icon{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:#fff;color:#123A5C;display:grid;place-items:center;font-size:1rem;line-height:1}.contact-icon svg{width:22px;height:22px;display:block}.d2-social-title{text-align:center;font-size:.9rem;font-weight:850;margin:4px 0 12px}.d2-socials{display:flex;justify-content:center;gap:16px;margin-bottom:16px}.d2-socials a{width:44px;height:44px;border-radius:50%;background:#fff;color:#123A5C;display:grid;place-items:center;text-decoration:none;font-weight:900;font-size:1rem}.d2-socials svg{width:24px;height:24px}.d2-footer-rights{text-align:center;border-top:1px solid rgba(255,255,255,.28);padding-top:12px;color:#bfd0dc;font-size:.72rem}
+.d2-sticky{position:fixed;left:50%;bottom:max(10px,env(safe-area-inset-bottom));transform:translateX(-50%);z-index:100;width:min(calc(100% - 24px),430px);display:grid;grid-template-columns:1fr 1fr 1.25fr;gap:7px;padding:7px;background:rgba(255,255,255,.94);border:1px solid #dbe4ea;border-radius:17px;box-shadow:0 8px 28px rgba(11,42,68,.18);backdrop-filter:blur(12px)}.d2-sticky a,.d2-sticky button{display:grid;place-items:center;min-height:40px;border:0;border-radius:11px;text-decoration:none;font:800 .68rem inherit;cursor:pointer}.d2-sticky a{background:#eef4f7;color:#123A5C}.d2-sticky .wa{background:#dcf7e5;color:#11612d}.d2-sticky button{background:#123A5C;color:#fff}
+
+/* ---- next style block ---- */
+
+/* Keep dividers between closed questions, but remove the grey divider
+   between an opened question and its answer. */
+.faq-list details[open] > p,
+.faq-list details[open] > div{
+  border-top:0 !important;
+  border-bottom:0 !important;
+}
+.faq-list details[open] summary{
+  border-bottom:none !important;
+}
+
+/* ---- next style block ---- */
+
+/* Reduce the visual gap inside an opened FAQ */
+.faq-list details[open] summary{
+  padding-bottom:7px !important;
+}
+.faq-list details[open] > p,
+.faq-list details[open] > div{
+  margin:0 !important;
+  padding:4px 20px 14px !important;
+  color:#526b7e !important;
+  font-weight:500 !important;
+  opacity:1 !important;
+  line-height:1.45 !important;
+  letter-spacing:0 !important;
+}
+/* Do not let any inherited light/opacity rule wash the answer out */
+.faq-list details p{
+  color:#526b7e !important;
+  opacity:1 !important;
+  font-weight:500 !important;
+}
+
+/* ---- next style block ---- */
+
+.faq-category-strip{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:10px !important;
+  margin:0 0 18px !important;
+  padding:0 !important;
+}
+.faq-cat{
+  min-height:54px !important;
+  border:1.5px solid #dbe5ec !important;
+  border-radius:16px !important;
+  background:#f5f8fb !important;
+  color:#123a5c !important;
+  font:800 15px/1.1 inherit !important;
+  padding:8px 6px !important;
+  cursor:pointer !important;
+  box-shadow:none !important;
+  -webkit-tap-highlight-color:transparent !important;
+}
+.faq-cat.active{
+  background:#dceefb !important;
+  border-color:#dceefb !important;
+  color:#123a5c !important;
+}
+.faq-cat:active{transform:scale(.98);}
+.d2-faq details.faq-hidden{display:none !important;}
+@media (max-width:380px){
+  .faq-category-strip{gap:7px !important;}
+  .faq-cat{font-size:13px !important; min-height:50px !important;}
+}
+
+/* ---- next style block ---- */
+
+/* Four category boxes — same compact style, with D2Cabs theme.
+   Keep the rounded corners subtle and limit the treatment to this strip. */
+.faq-category-strip{
+  display:grid !important;
+  grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+  gap:10px !important;
+  margin:0 0 18px !important;
+  padding:0 !important;
+  background:transparent !important;
+  border:0 !important;
+}
+.faq-cat{
+  min-height:58px !important;
+  height:58px !important;
+  padding:8px 7px !important;
+  border:1.5px solid #dbe5ec !important;
+  border-radius:14px !important;
+  background:#f5f8fb !important;
+  color:#123a5c !important;
+  font:800 15px/1.1 inherit !important;
+  box-shadow:none !important;
+}
+.faq-cat.active{
+  background:#dceefb !important;
+  border-color:#dceefb !important;
+  color:#123a5c !important;
+}
+.faq-cat:active{transform:scale(.98) !important}
+
+/* Do not let category-box styling spill across the page. */
+.faq-main .faq-category-strip{width:100% !important}
+@media(max-width:600px){
+  .faq-category-strip{gap:8px !important}
+  .faq-cat{min-height:56px !important;height:56px !important;font-size:14px !important}
+}
+@media(max-width:380px){
+  .faq-category-strip{gap:6px !important}
+  .faq-cat{font-size:12.5px !important;border-radius:12px !important}
+}
+
+/* ---- next style block ---- */
+
+/* Category tabs: match the existing D2Cabs FAQ palette and proportions */
+.faq-category-strip{
+  grid-template-columns:repeat(4,1fr) !important;
+  gap:8px !important;
+  margin:0 0 16px !important;
+}
+.faq-cat{
+  min-height:48px !important;
+  height:48px !important;
+  padding:6px 5px !important;
+  border:1px solid #e4e9ef !important;
+  border-radius:10px !important;
+  background:#f5f7fa !important;
+  color:#5b7285 !important;
+  font-size:13px !important;
+  font-weight:800 !important;
+  letter-spacing:0 !important;
+}
+.faq-cat.active{
+  background:#dceefb !important;
+  border-color:#dceefb !important;
+  color:#123a5c !important;
+}
+@media(max-width:380px){
+  .faq-category-strip{gap:6px !important}
+  .faq-cat{
+    min-height:46px !important;
+    height:46px !important;
+    font-size:12px !important;
+    border-radius:9px !important;
+  }
+}
+
+/* ---- next style block ---- */
+
+.faq-category-strip{
+  gap:8px !important;
+  margin-bottom:16px !important;
+}
+.faq-cat{
+  min-height:42px !important;
+  height:42px !important;
+  padding:4px 5px !important;
+  border:1px solid #e4e9ef !important;
+  border-radius:9px !important;
+  background:#f5f7fa !important;
+  color:#5b7285 !important;
+  font-size:12.5px !important;
+  line-height:1 !important;
+}
+.faq-cat.active{
+  background:#123a5c !important;
+  border-color:#123a5c !important;
+  color:#fff !important;
+}
+@media(max-width:380px){
+  .faq-category-strip{gap:6px !important}
+  .faq-cat{
+    min-height:40px !important;
+    height:40px !important;
+    padding:3px 4px !important;
+    font-size:11.5px !important;
+  }
+}
+
+/* ---- next style block ---- */
+
+/* Open FAQ: keep the minus in the question row and pull the answer
+   directly underneath the question text. */
+.d2-faq details[open] summary{
+  padding-bottom:0 !important;
+  margin-bottom:0 !important;
+}
+.d2-faq details[open] p{
+  margin-top:0 !important;
+  padding-top:0 !important;
+  border-top:0 !important;
+  transform:translateY(-2px) !important;
+}
+.d2-faq details[open] summary:after{
+  top:50% !important;
+  transform:translateY(-50%) !important;
+}
+
+/* ---- next style block ---- */
+
+.d2-faq details summary{
+  position:relative !important;
+  padding-right:66px !important;
+}
+.d2-faq details summary::after{
+  position:absolute !important;
+  right:18px !important;
+  top:50% !important;
+  transform:translateY(-50%) !important;
+  margin:0 !important;
+  align-self:auto !important;
+}
+.d2-faq details[open] summary{
+  padding-bottom:10px !important;
+}
+.d2-faq details[open] p{
+  margin-top:4px !important;
+  padding-top:0 !important;
+}
+
+/* ---- next style block ---- */
+
+.need-help-section{margin:28px 0 24px!important;padding:0!important;background:transparent!important}.need-help-heading{margin:0 0 14px!important;font-size:1.08rem!important;font-weight:850!important;letter-spacing:-.2px!important}.need-help-heading:before,.need-help-heading:after{flex:0 0 60px!important;width:60px!important;height:10px!important}
+.need-help-cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}.need-help-card{min-width:0!important;min-height:158px!important;padding:14px 7px 12px!important;border:1px solid rgba(255,255,255,.14)!important;border-radius:15px!important;background:#fff!important;box-shadow:0 8px 24px rgba(18,58,92,.07)!important;text-align:center!important;text-decoration:none!important;color:#123A5C!important;display:flex!important;flex-direction:column!important;align-items:center!important;box-sizing:border-box!important}.need-help-icon{width:38px!important;height:38px!important;flex:0 0 38px!important;margin:0 auto 9px!important;border-radius:10px!important;background:#123A5C!important;display:grid!important;place-items:center!important}.need-help-icon svg{width:20px!important;height:20px!important;fill:none!important;stroke:#fff!important;stroke-width:1.8!important;stroke-linecap:round!important;stroke-linejoin:round!important}.need-help-card strong{display:block!important;margin:0 0 5px!important;color:#123A5C!important;font-size:.84rem!important;line-height:1.15!important;font-weight:900!important}.need-help-card small{display:block!important;min-height:30px!important;margin:0 0 9px!important;color:#5B7285!important;font-size:.52rem!important;line-height:1.4!important}.need-help-card b{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:28px!important;padding:0 8px!important;border:1px solid #DCEEFB!important;border-radius:7px!important;background:#DCEEFB!important;color:#123A5C!important;font:900 .49rem/1 Arial,sans-serif!important;letter-spacing:.04em!important}
+
+/* ---- next style block ---- */
+
+.ask-question-section{margin:28px 0 24px!important;padding:0!important;background:transparent!important}
+.ask-question-card{padding:20px 16px!important;border:1px solid #E4E9EF!important;border-radius:18px!important;background:#fff!important;box-shadow:0 10px 24px rgba(11,42,68,.08)!important}
+.ask-question-heading{margin:0 0 7px!important;text-align:center!important;color:#123A5C!important;font-size:1.35rem!important;line-height:1.15!important;font-weight:900!important}
+.ask-question-text{margin:0 0 15px!important;text-align:center!important;color:#5B7285!important;font-size:.84rem!important;line-height:1.45!important}
+.ask-question-field{min-height:43px!important;margin:0 0 8px!important}
+.ask-question-input{width:100%!important;min-height:88px!important;resize:vertical!important;box-sizing:border-box!important;padding:13px 14px!important;border:1px solid #E4E9EF!important;border-radius:11px!important;background:#F5F7FA!important;color:#123A5C!important;font:700 .72rem/1.45 Arial,sans-serif!important;outline:none!important}
+.ask-question-input:focus{border-color:#123A5C!important;background:#fff!important}
+.ask-question-input::placeholder{color:#8AA0B1!important;font-weight:600!important}
+.ask-question-submit{width:100%!important;min-height:43px!important;margin-top:10px!important;border:0!important;border-radius:10px!important;background:#123A5C!important;color:#fff!important;font:900 .68rem/1 Arial,sans-serif!important;letter-spacing:.02em!important;cursor:pointer!important}
+
+/* ---- next style block ---- */
+
+.need-question-section, .ask-question-section, .question-form-card, .ask-question-card {
+  background:#fff !important;
+  border:1px solid #e4e9ef !important;
+  box-shadow:0 12px 30px rgba(11,42,68,.10), 0 3px 10px rgba(11,42,68,.05) !important;
+}
+#askQuestionForm button[type="submit"], .ask-question-form button[type="submit"], .question-form button[type="submit"], button.send-question {
+  font-size:1.08rem !important;
+  font-weight:900 !important;
+  min-height:48px !important;
+}
+
+/* ---- next style block ---- */
+
+/* Keep the question card corners at the original compact radius. */
+.ask-question-card{border-radius:12px!important}
+/* Compact only the Name, Mobile and Email fields. */
+#askQuestionForm > .ask-question-field:nth-child(1),
+#askQuestionForm > .ask-question-field:nth-child(2),
+#askQuestionForm > .ask-question-field:nth-child(3){
+  min-height:36px!important;height:36px!important;padding:8px 12px!important;
+}
+
+/* ---- next style block ---- */
+
+/* Enlarge only the typography inside the existing question card; do not resize the card. */
+.ask-question-heading{font-size:1.55rem!important;line-height:1.12!important;font-weight:900!important}
+.ask-question-text{font-size:1rem!important;line-height:1.4!important;font-weight:600!important}
+.ask-question-input{font-size:.9rem!important}
+.ask-question-input::placeholder{font-size:.9rem!important}
+.ask-question-submit{font-size:1rem;font-weight:900!important}
+
+/* ---- next style block ---- */
+
+#askQuestionForm{padding-top:10px!important;padding-bottom:10px!important;box-sizing:border-box!important}
+
+/* ---- next style block ---- */
+
+/* Remove only the outer section box; keep the form card and its fields unchanged. */
+.ask-question-section{background:transparent!important;border:0!important;box-shadow:none!important}
+
+/* ---- next style block ---- */
+
+.ask-question-section{margin:28px 0 24px!important;padding:0!important;background:transparent!important}
+.ask-question-section > .ask-question-heading{margin:0 0 28px!important;font-size:1.08rem!important;line-height:1.15!important;font-weight:850!important;letter-spacing:-.2px!important;color:#123A5C!important}
+.ask-question-section > .ask-question-text{margin:0 0 14px!important;text-align:center!important;color:#5B7285!important;font-size:.84rem!important;line-height:1.4!important;font-weight:600!important}
+.ask-question-card{padding:16px!important}
+
+/* ---- next style block ---- */
+
+/* Extra vertical breathing room for section titles and their subheadings only */
+.d2-heading{padding-top:8px!important;padding-bottom:8px!important}
+.ask-question-text{padding-top:5px!important;padding-bottom:8px!important}
+.d2-final h3{padding-top:8px!important;padding-bottom:8px!important}
+.d2-final p{padding-top:4px!important;padding-bottom:7px!important}
+
+/* ---- next style block ---- */
+
+#askQuestionForm .ask-question-field + .ask-question-field,
+#askQuestionForm .ask-question-field + .ask-question-input{margin-top:10px!important}
+#askQuestionForm .ask-question-input + .ask-question-input{margin-top:10px!important}
+
+/* ---- next style block ---- */
+
+/* Definitively remove only the shadow/box behind the section titles. */
+.ask-question-section.ask-question-section,
+.need-help-section.need-help-section,
+.ask-question-section > .ask-question-heading,
+.need-help-section > .need-help-heading,
+.ask-question-heading,
+.need-help-heading{
+  background:transparent !important;
+  border:0 !important;
+  ;
+}
+
+/* ---- next style block ---- */
+
+.d2-heading{padding-top:6px!important;padding-bottom:6px!important}.need-help-heading{margin-top:18px!important;margin-bottom:18px!important}.ask-question-heading{padding-top:6px!important;padding-bottom:6px!important}.d2-final h3{padding-top:6px!important;padding-bottom:6px!important}.d2-final p{padding-top:3px!important;padding-bottom:5px!important}
+
+/* ---- next style block ---- */
+
+.ask-question-card{padding:20px 16px!important}
+.ask-question-card .ask-question-heading{margin:0 0 10px!important;padding:0!important;font-size:1.35rem!important;line-height:1.15!important;text-align:center!important}
+.ask-question-card .ask-question-text{display:block!important;margin:0 0 16px!important;padding:0!important;text-align:center!important;color:#5B7285!important;font-size:.84rem!important;line-height:1.4!important;font-weight:600!important}
+
+/* ---- next style block ---- */
+
+/* Keep Still Have a Question on one line on mobile without changing the section box. */
+.ask-question-section > .ask-question-heading{
+  white-space:nowrap!important;
+  flex-wrap:nowrap!important;
+  width:100%!important;
+  box-sizing:border-box!important;
+  font-size:1.08rem!important;
+}
+.ask-question-section > .ask-question-heading span{
+  white-space:nowrap!important;
+  flex:0 0 auto!important;
+}
+@media (max-width:380px){
+  .ask-question-section > .ask-question-heading{font-size:1rem!important;gap:3px!important}
+  .ask-question-section > .ask-question-heading:before,.ask-question-section > .ask-question-heading:after{flex-basis:42px!important;width:42px!important}
+}
+
+/* ---- next style block ---- */
+
+/* Definitive mobile fix: one-line heading, no side decorations. */
+.ask-question-section > .ask-question-heading{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  box-sizing:border-box!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  text-align:center!important;
+  font-size:1.15rem!important;
+  line-height:1.2!important;
+  letter-spacing:-.35px!important;
+  margin:0 0 20px!important;
+  padding:6px 0!important;
+}
+.ask-question-section > .ask-question-heading:before,
+.ask-question-section > .ask-question-heading:after{
+  display:none!important;
+  content:none!important;
+}
+.ask-question-section > .ask-question-heading span{
+  display:inline-block!important;
+  white-space:nowrap!important;
+}
+
+/* ---- next style block ---- */
+
+.still-question-section, .ask-question-section, .d2-ask-question, .question-form-section {
+  background:#123A5C !important; color:#fff !important;
+  border-color:#123A5C !important;
+}
+.still-question-section h2, .ask-question-section h2, .d2-ask-question h2, .question-form-section h2,
+.still-question-section p, .ask-question-section p, .d2-ask-question p, .question-form-section p,
+.still-question-section label, .ask-question-section label, .d2-ask-question label, .question-form-section label { color:#fff !important; }
+.still-question-section input, .still-question-section textarea,
+.ask-question-section input, .ask-question-section textarea,
+.d2-ask-question input, .d2-ask-question textarea,
+.question-form-section input, .question-form-section textarea {
+  background:#fff !important; color:#123A5C !important; border-color:#DCEEFB !important;
+}
+.still-question-section button, .ask-question-section button, .d2-ask-question button, .question-form-section button {
+  background:#fff !important; color:#123A5C !important; border-color:#fff !important;
+}
+
+/* ---- next style block ---- */
+
+/* Reverse colours: blue form card with white Send button. */
+.ask-question-card{background:#123A5C!important;border-color:#123A5C!important;box-shadow:0 10px 24px rgba(11,42,68,.14)!important}
+.ask-question-card .ask-question-heading{color:#fff!important}
+.ask-question-card .ask-question-text{color:rgba(255,255,255,.78)!important}
+.ask-question-card .ask-question-submit{background:#fff!important;color:#123A5C!important}
+
+/* ---- next style block ---- */
+
+.still-question-section{background:#123A5C!important;}
+.still-question-section form,.still-question-section .question-form,.still-question-section .d2-question-form{background:transparent!important;border:0!important;box-shadow:none!important;}
+.still-question-section input,.still-question-section textarea,.still-question-section select{background:#F5F7FA!important;color:#123A5C!important;border:1px solid #E4E9EF!important;}
+.still-question-section button[type="submit"],.still-question-section .send-btn,.still-question-section .submit-btn{display:block!important;width:100%!important;margin-top:14px!important;min-height:48px!important;padding:13px 18px!important;border:0!important;border-radius:10px!important;background:#123A5C!important;color:#fff!important;font-size:1rem!important;font-weight:900!important;box-shadow:0 8px 18px rgba(11,42,68,.22)!important;}
+
+/* ---- next style block ---- */
+
+/* Send CTA highlight */
+.d2-question-form button[type="submit"],
+#questionForm button[type="submit"],
+button.send-question,
+button[data-send-question]{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:center !important;
+  width:100% !important;
+  min-height:48px !important;
+  margin-top:14px !important;
+  padding:0 18px !important;
+  border:0 !important;
+  border-radius:10px !important;
+  background:#123A5C !important;
+  color:#fff !important;
+  font-size:1rem !important;
+  font-weight:900 !important;
+  letter-spacing:.01em !important;
+  box-shadow:0 8px 18px rgba(18,58,92,.24) !important;
+  cursor:pointer !important;
+}
+.d2-question-form button[type="submit"]:active,
+#questionForm button[type="submit"]:active,
+button.send-question:active,
+button[data-send-question]:active{
+  transform:translateY(1px) !important;
+  box-shadow:0 5px 12px rgba(18,58,92,.20) !important;
+}
+
+/* ---- next style block ---- */
+
+/* Definitive Send CTA styling */
+.ask-question-submit{
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  width:100%!important;min-height:52px!important;margin:16px 0 0!important;padding:0 20px!important;
+  border:0!important;border-radius:10px!important;background:#123A5C!important;color:#fff!important;
+  font-size:1rem;font-weight:900!important;letter-spacing:.01em!important;
+  box-shadow:0 9px 20px rgba(18,58,92,.28)!important;cursor:pointer!important;
+}
+.ask-question-submit:active{transform:translateY(1px)!important;box-shadow:0 5px 12px rgba(18,58,92,.22)!important;}
+
+/* ---- next style block ---- */
+
+.ask-question-card .ask-question-input,
+.ask-question-card .ask-question-input:focus,
+.ask-question-card input.ask-question-input:focus,
+.ask-question-card textarea.ask-question-input:focus{background:#F5F7FA!important;color:#123A5C!important;border-color:#E4E9EF!important;box-shadow:none!important;outline:none!important}
+.ask-question-card .ask-question-submit,
+.ask-question-card .ask-question-submit:hover,
+.ask-question-card .ask-question-submit:focus{background:#DCEEFB!important;color:#123A5C!important;border:0!important;box-shadow:0 8px 18px rgba(18,58,92,.18)!important}
+
+/* ---- next style block ---- */
+
+/* Final requested colour: white Send button with D2Cabs blue text. */
+.ask-question-card .ask-question-submit,
+.ask-question-card .ask-question-submit:hover,
+.ask-question-card .ask-question-submit:focus,
+.ask-question-card .ask-question-submit:active,
+.still-question-section .ask-question-submit,
+.still-question-section .ask-question-submit:hover,
+.still-question-section .ask-question-submit:focus,
+.still-question-section .ask-question-submit:active{
+  background:#fff!important;
+  color:#123A5C!important;
+  border:0!important;
+  box-shadow:0 8px 18px rgba(18,58,92,.18)!important;
+}
+
+/* ---- next style block ---- */
+
+.ask-question-submit{font-size:1rem!important;}
+
+/* ---- next style block ---- */
+
+.ask-question-submit, .ask-question-submit * { font-size: 1.35rem !important; line-height: 1.1 !important; font-weight: 900 !important; }
+
+/* ---- next style block ---- */
+
+/* Final: full-bleed photo CTA matching the supplied reference image. */
+#d2Homepage{padding-bottom:0!important}
+#d2Homepage .d2-final{
+  margin:28px -14px 0!important;
+  border-radius:0!important;
+  border:0!important;
+  box-shadow:none!important;
+  min-height:315px!important;
+  padding:58px 24px 52px!important;
+  box-sizing:border-box!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  background-image:linear-gradient(rgba(11,42,68,.68),rgba(11,42,68,.68)),url(../images/img_c101.jpg)!important;
+  background-size:cover!important;
+  background-position:center center!important;
+  background-repeat:no-repeat!important;
+}
+#d2Homepage .d2-final h3{font-size:1.5rem!important;line-height:1.15!important;margin:0 0 10px!important;color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.22)!important}
+#d2Homepage .d2-final p{max-width:360px!important;font-size:.82rem!important;line-height:1.5!important;margin:0 auto 18px!important;color:#fff!important;text-shadow:0 1px 3px rgba(0,0,0,.2)!important}
+#d2Homepage .d2-final button{background:#fff!important;color:#123A5C!important;border:0!important;border-radius:12px!important;padding:13px 28px!important;font-size:.84rem!important;font-weight:900!important;box-shadow:0 8px 20px rgba(0,0,0,.2)!important}
+.d2-footer{margin-top:0!important}
+.d2-footer-logo-mark{display:block!important;width:78px!important;height:auto!important;margin:0 0 10px!important;object-fit:contain!important}
+
+/* ---- next style block ---- */
+
+/* Final verified: compact Rajwada CTA with breathing room before footer. */
+#d2Homepage .d2-final{
+  min-height:0!important;
+  height:250px!important;
+  margin:28px 0 28px!important;
+  padding:34px 20px!important;
+  box-sizing:border-box!important;
+  border-radius:28px!important;
+  overflow:hidden!important;
+  background-size:145% auto!important;
+  background-position:center 18%!important;
+  background-repeat:no-repeat!important;
+}
+#d2Homepage .d2-final h3{margin:0 0 7px!important}
+#d2Homepage .d2-final p{margin:0 auto 14px!important}
+.d2-footer{margin-top:0!important}
+
+/* ---- next style block ---- */
+
+/* Final: guaranteed breathing room between the rounded CTA and footer. */
+#d2Homepage{padding-bottom:28px!important}
+#d2Homepage .d2-final{
+  margin:28px 0 0!important;
+  border-radius:28px!important;
+  overflow:hidden!important;
+  height:250px!important;
+}
+
+/* ---- next style block ---- */
+
+/* Final requested hero: centered typography, FAQ title retained, same height, tighter Rajwada zoom. */
+.faq-hero{
+  min-height:255px!important;
+  height:255px!important;
+  padding:28px 18px!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  background-size:135% auto!important;
+  background-position:center 34%!important;
+}
+.faq-content{
+  width:100%!important;
+  max-width:520px!important;
+  margin:0 auto!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+}
+.faq-hero h1{margin:8px 0 9px!important;font-size:2rem!important;line-height:1!important}
+.faq-hero p{max-width:330px!important;margin:0 auto!important}
+
+/* ---- next style block ---- */
+
+.need-help-section{margin:28px 0 24px!important;padding:0!important;background:transparent!important}
+.need-help-heading{margin:0 0 14px!important;color:#123A5C!important}
+.need-help-cards{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:8px!important}
+.need-help-card{min-width:0!important;min-height:158px!important;padding:14px 7px 12px!important;border:1px solid rgba(255,255,255,.16)!important;border-radius:15px!important;background:linear-gradient(145deg,#123A5C 0%,#0B2A44 100%)!important;box-shadow:0 10px 22px rgba(11,42,68,.14)!important;text-align:center!important;text-decoration:none!important;color:#fff!important;display:flex!important;flex-direction:column!important;align-items:center!important;box-sizing:border-box!important}
+.need-help-icon{width:38px!important;height:38px!important;flex:0 0 38px!important;margin:0 auto 9px!important;border-radius:10px!important;background:#DCEEFB!important;display:grid!important;place-items:center!important}
+.need-help-icon svg{width:20px!important;height:20px!important;fill:none!important;stroke:#123A5C!important;stroke-width:1.8!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.need-help-card strong{display:block!important;margin:0 0 5px!important;color:#fff!important;font-size:.84rem!important;line-height:1.15!important;font-weight:900!important}
+.need-help-card small{display:block!important;min-height:30px!important;margin:0 0 9px!important;color:rgba(255,255,255,.76)!important;font-size:.52rem!important;line-height:1.4!important}
+.need-help-card b{display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:28px!important;padding:0 8px!important;border:1px solid rgba(255,255,255,.28)!important;border-radius:7px!important;background:#fff!important;color:#123A5C!important;font:900 .49rem/1 Arial,sans-serif!important;letter-spacing:.04em!important}
+
+/* ---- next style block ---- */
+
+.faq-header{height:100px!important;width:100%!important;margin:0!important;padding:0 18px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;background:#f6f6f5!important;color:#123A5C!important;position:relative!important;z-index:10!important}
+.faq-header-menu,.faq-header-call{width:40px!important;height:40px!important;flex:0 0 40px!important;border:1px solid #E4E9EF!important;border-radius:12px!important;background:#F5F7FA!important;color:#123A5C!important;display:grid!important;place-items:center!important;text-decoration:none!important;padding:0!important;box-shadow:none!important}
+.faq-header-menu svg,.faq-header-call svg{width:20px!important;height:20px!important;fill:none!important;stroke:#123A5C!important;stroke-width:1.9!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.faq-header-logo{text-align:center!important;color:#123A5C!important;font-size:1.18rem!important;font-weight:900!important;letter-spacing:-.45px!important;line-height:1!important}
+.faq-header-logo small{display:block!important;margin-top:3px!important;color:#5B7285!important;font-size:.45rem!important;letter-spacing:1.25px!important;font-weight:800!important}
+
+/* ---- next style block ---- */
+
+html,body{margin:0!important;padding:0!important;}
+.faq-page{margin:0!important;padding:0!important;}
+.faq-header{margin:0!important;padding:0 18px!important;top:0!important;transform:none!important;}
+.faq-header-logo small{display:none!important;}
+
+/* ---- next style block ---- */
+
+html,body{margin:0!important;padding:0!important;}
+.faq-page{margin:0!important;padding:0!important;}
+.faq-header{margin:0!important;padding:0 18px!important;top:0!important;transform:none!important;}
+
+/* ---- next style block ---- */
+
+/* Use the existing grey header area itself as the complete navigation bar. */
+.faq-header{height:100px!important;margin:0!important;padding:0 18px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:12px!important;background:#f6f6f5!important;box-shadow:none!important;position:relative!important;z-index:20!important}
+.faq-header-logo{flex:0 0 auto!important;text-decoration:none!important;color:#123A5C!important;font-size:1.18rem!important;font-weight:900!important;letter-spacing:-.45px!important;line-height:1!important}
+.faq-header-nav{display:flex!important;align-items:center!important;justify-content:center!important;gap:14px!important;min-width:0!important;flex:1 1 auto!important;white-space:nowrap!important;overflow:hidden!important}
+.faq-header-nav a{color:#5B7285!important;text-decoration:none!important;font-size:.62rem!important;font-weight:800!important;line-height:1!important}
+.faq-header-nav a:first-child{color:#123A5C!important}
+.faq-header-cta{flex:0 0 auto!important;display:inline-flex!important;align-items:center!important;justify-content:center!important;min-height:34px!important;padding:0 13px!important;border-radius:9px!important;background:#FFBA08!important;color:#123A5C!important;text-decoration:none!important;font-size:.58rem!important;font-weight:900!important;letter-spacing:.01em!important;box-shadow:none!important}
+@media(max-width:430px){
+ .faq-header{height:92px!important;padding:0 14px!important;gap:8px!important}
+ .faq-header-logo{font-size:1.05rem!important}
+ .faq-header-nav{gap:9px!important}
+ .faq-header-nav a{font-size:.54rem!important}
+ .faq-header-cta{min-height:32px!important;padding:0 10px!important;font-size:.52rem!important;border-radius:8px!important}
+}
+
+/* ---- next style block ---- */
+
+/* Header copied to match the supplied mobile reference: grey band, menu icon, centered brand, call icon. */
+.faq-header{height:268px!important;margin:0!important;padding:0 32px!important;position:relative!important;display:flex!important;align-items:center!important;justify-content:space-between!important;background:#f6f6f5!important;box-shadow:none!important;z-index:20!important}
+.faq-header-menu,.faq-header-call{width:72px!important;height:72px!important;flex:0 0 72px!important;border:1px solid #e4e9ef!important;border-radius:22px!important;background:#f5f7fa!important;display:grid!important;place-items:center!important;box-shadow:0 2px 8px rgba(18,58,92,.03)!important;text-decoration:none!important}
+.faq-header-menu svg,.faq-header-call svg{width:31px!important;height:31px!important;fill:none!important;stroke:#123a5c!important;stroke-width:2.2!important;stroke-linecap:round!important;stroke-linejoin:round!important}
+.faq-header-brand{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;color:#123a5c!important;white-space:nowrap!important}
+.faq-header-brand .faq-header-logo{display:block!important;color:#123a5c!important;font-size:2rem!important;font-weight:900!important;line-height:1!important;letter-spacing:-1px!important}
+.faq-header-brand small{display:block!important;margin-top:7px!important;color:#5b7285!important;font-size:.58rem!important;font-weight:900!important;letter-spacing:.30em!important;line-height:1!important}
+.faq-header-nav{display:none!important}
+@media(max-width:430px){
+ .faq-header{height:268px!important;padding:0 32px!important}
+ .faq-header-menu,.faq-header-call{width:72px!important;height:72px!important;flex-basis:72px!important;border-radius:22px!important}
+ .faq-header-brand .faq-header-logo{font-size:1.9rem!important}
+ .faq-header-brand small{font-size:.55rem!important;letter-spacing:.28em!important}
+}
+
+/* ---- next style block ---- */
+
+/* Final compact mobile header: only D2Cabs, no tagline, no oversized padding. */
+.faq-header{height:150px!important;min-height:150px!important;margin:0!important;padding:0 24px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;background:#f6f6f5!important;position:relative!important;z-index:20!important;gap:12px!important}
+.faq-header-brand{display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;white-space:nowrap!important}
+.faq-header-brand .faq-header-logo{display:block!important;color:#123A5C!important;font-size:1.5rem!important;font-weight:900!important;line-height:1!important;letter-spacing:-.8px!important}
+.faq-header-brand small{display:block!important;margin-top:4px!important;font-size:.48rem!important;line-height:1!important;letter-spacing:.24em!important;font-weight:800!important;color:#5B7285!important}
+.faq-header-nav{display:none!important}
+.faq-header-menu,.faq-header-call{width:54px!important;height:54px!important;flex:0 0 54px!important;border-radius:17px!important}
+.faq-header-menu svg,.faq-header-call svg{width:27px!important;height:27px!important}
+@media(max-width:430px){
+ .faq-header{height:150px!important;min-height:150px!important;padding:0 24px!important}
+ .faq-header-brand .faq-header-logo{font-size:1.48rem!important}
+ .faq-header-menu,.faq-header-call{width:54px!important;height:54px!important;flex-basis:54px!important;border-radius:17px!important}
+}
+
+/* ---- next style block ---- */
+
+/* Compact header: small controls at the far left/right, centered D2Cabs only. */
+.faq-header{height:108px!important;min-height:108px!important;margin:0!important;padding:0 18px!important;display:flex!important;align-items:center!important;justify-content:space-between!important;gap:10px!important;background:#f6f6f5!important;position:relative!important;z-index:20!important;box-sizing:border-box!important}
+.faq-header-menu,.faq-header-call{width:42px!important;height:42px!important;flex:0 0 42px!important;border-radius:13px!important;background:#F5F7FA!important;border:1px solid #E4E9EF!important;display:grid!important;place-items:center!important;padding:0!important}
+.faq-header-menu svg,.faq-header-call svg{width:21px!important;height:21px!important}
+.faq-header-brand{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important;display:flex!important;align-items:center!important;justify-content:center!important;text-decoration:none!important;white-space:nowrap!important}
+.faq-header-brand .faq-header-logo{display:block!important;font-size:1.22rem!important;line-height:1!important;letter-spacing:-.5px!important;font-weight:900!important;color:#123A5C!important}
+.faq-header-brand small{display:none!important}
+.faq-header-nav{display:none!important}
+
+/* ---- next style block ---- */
+
+/* Final requested header: no gap to hero, blue menu, blue Book Now CTA. */
+.faq-header{height:88px!important;min-height:88px!important;margin:0!important;padding:0 10px!important;background:#f6f6f5!important;gap:0!important;border:0!important;box-shadow:none!important;box-sizing:border-box!important}
+.faq-header-menu{width:40px!important;height:40px!important;flex:0 0 40px!important;border-radius:11px!important;background:#123A5C!important;border:1px solid #123A5C!important;color:#fff!important;box-shadow:none!important}
+.faq-header-menu svg{width:21px!important;height:21px!important;stroke:#fff!important}
+.faq-header-brand{position:absolute!important;left:50%!important;top:50%!important;transform:translate(-50%,-50%)!important}
+.faq-header-brand .faq-header-logo{font-size:1.18rem!important;color:#123A5C!important}
+.faq-header-cta-right{display:inline-flex!important;align-items:center!important;justify-content:center!important;height:40px!important;min-width:92px!important;padding:0 15px!important;box-sizing:border-box!important;border-radius:11px!important;background:#123A5C!important;color:#fff!important;text-decoration:none!important;font-size:.62rem!important;font-weight:900!important;line-height:1!important}
+.faq-hero{margin-top:0!important;border-top:0!important}
+@media(max-width:430px){.faq-header{height:88px!important;min-height:88px!important;padding:0 10px!important}.faq-header-menu{width:40px!important;height:40px!important;flex-basis:40px!important}.faq-header-cta-right{height:40px!important;min-width:92px!important}}
+
+/* ---- next style block ---- */
+
+/* Final header adjustment: slightly tighter, larger menu lines, compact Book CTA. */
+.faq-header{height:68px!important;min-height:68px!important;padding:0 8px!important;margin:0!important;}
+.faq-header-menu{width:40px!important;height:40px!important;flex-basis:40px!important;margin-left:0!important;}
+.faq-header-menu svg{width:25px!important;height:25px!important;stroke-width:2.2!important;}
+.faq-header-cta-right{height:40px!important;min-width:78px!important;padding:0 14px!important;margin-right:0!important;font-size:.70rem!important;font-weight:900!important;}
+.faq-header-brand .faq-header-logo{font-size:1.22rem!important;}
+.faq-header-brand small{font-size:.48rem!important;margin-top:3px!important;}
+.faq-hero{margin-top:0!important;padding-top:28px!important;}
+
+/* ---- next style block ---- */
+
+/* Final requested header polish: tighter header/hero, restore tagline. */
+.faq-header{
+  height:76px!important;
+  min-height:76px!important;
+  padding:0 8px!important;
+}
+.faq-header-menu{margin-left:0!important;}
+.faq-header-cta-right{margin-right:0!important;}
+.faq-header-brand small{
+  display:block!important;
+  margin-top:3px!important;
+  color:#5B7285!important;
+  font-size:.48rem!important;
+  line-height:1!important;
+  letter-spacing:.28em!important;
+  font-weight:800!important;
+}
+.faq-header-logo{line-height:1!important;}
+.faq-hero{margin-top:0!important;}
+
+/* ---- next style block ---- */
+
+.faq-header{height:62px!important;min-height:62px!important;padding:0 8px!important;}
+.faq-hero{margin-top:0!important;}
+@media(max-width:430px){.faq-header{height:62px!important;min-height:62px!important;padding:0 8px!important;}}
+
+/* ---- next style block ---- */
+
+.header .book-btn,.header a[href*="book"],.header button{font-size:inherit}.header .book-btn{width:72px!important;height:32px!important;font-size:14px!important;font-weight:800!important}
+
+/* ---- next style block ---- */
+
+/* Keep the plus/minus perfectly centered in the question row, including when open. */
+.d2-faq details summary{
+  display:flex!important;
+  align-items:center!important;
+  min-height:64px!important;
+  box-sizing:border-box!important;
+  padding-top:16px!important;
+  padding-bottom:16px!important;
+}
+.d2-faq details[open] summary{
+  padding-top:16px!important;
+  padding-bottom:16px!important;
+}
+.d2-faq details summary::after{
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+
+/* ---- next style block ---- */
+
+/* Final polish: header matches page background */
+.faq-header{background:#f6f6f5!important;background-image:linear-gradient(180deg,#fafafa 0%,#f3f4f4 100%)!important;}
+/* Final polish: make all four FAQ tabs' outlines clearly visible */
+.faq-category-strip .faq-cat{border:1px solid #C9D1D8!important;}
+.faq-category-strip .faq-cat.active{border-color:#123A5C!important;}
+/* Correct Book CTA text size without changing its button dimensions */
+.faq-header-cta-right{font-size:.88rem!important;line-height:1!important;}
+
+/* ---- next style block ---- */
+
+/* Header uses the same clean page background tone. */
+.faq-header{background:#fafafa!important;background-image:none!important;}
+
+/* ---- next style block ---- */
+
+/* Final requested footer alignment: match the header's 15px left breathing room. */
+.d2-footer{margin-left:0!important;margin-right:0!important;padding-left:8px!important;padding-right:8px!important;box-sizing:border-box!important;}
+/* Final social treatment: white circular backgrounds with clean blue brand marks. */
+.d2-socials{gap:16px!important;margin-bottom:16px!important;}
+.d2-socials a{width:42px!important;height:42px!important;border-radius:50%!important;background:#fff!important;color:#123A5C!important;box-shadow:none!important;display:grid!important;place-items:center!important;}
+.d2-socials svg{width:24px!important;height:24px!important;display:block!important;}
+.d2-socials a[aria-label="Facebook"] svg,.d2-socials a[aria-label="X"] svg,.d2-socials a[aria-label="LinkedIn"] svg{fill:currentColor!important;stroke:none!important;}
+.d2-socials a[aria-label="Instagram"] svg{fill:none!important;stroke:currentColor!important;stroke-width:1.9!important;}
+.d2-socials a[aria-label="Instagram"] svg .dot{fill:currentColor!important;stroke:none!important;}
+
+/* ---- next style block ---- */
+
+.need-help-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:10px!important;}
+.need-help-card{min-height:158px!important;padding:14px 10px 12px!important;}
+
+/* ---- next style block ---- */
+
+/* 8 questions in each category: Booking, Your Ride and Payment. */
+.d2-faq details p{font-weight:700!important;}
+
+/* Make the Get In Touch cards larger and easier to read in the 2x2 layout. */
+.need-help-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;}
+.need-help-card{min-height:190px!important;padding:16px 10px 14px!important;border-radius:16px!important;}
+.need-help-icon{width:44px!important;height:44px!important;flex:0 0 44px!important;margin:0 auto 10px!important;border-radius:50%!important;background:#fff!important;}
+.need-help-icon svg{width:22px!important;height:22px!important;stroke:#123A5C!important;}
+.need-help-card strong{font-size:1rem!important;line-height:1.2!important;margin-bottom:7px!important;}
+.need-help-card small{font-size:.66rem!important;line-height:1.45!important;min-height:38px!important;margin-bottom:11px!important;}
+.need-help-card b{min-height:32px!important;padding:0 11px!important;border-radius:8px!important;font-size:.58rem!important;}
+@media(max-width:380px){
+  .need-help-cards{gap:9px!important;}
+  .need-help-card{min-height:182px!important;padding-left:8px!important;padding-right:8px!important;}
+  .need-help-card strong{font-size:.94rem!important;}
+  .need-help-card small{font-size:.61rem!important;}
+}
+
+/* ---- next style block ---- */
+
+/* Get In Touch: equal top/bottom breathing room + visibly dimensional cards. */
+.need-help-section{background:linear-gradient(180deg,#f8fafc 0%,#eef3f7 100%)!important;}
+.need-help-cards{gap:12px!important;}
+.need-help-card{
+  background:linear-gradient(145deg,#ffffff 0%,#fdfefe 38%,#edf5ff 100%)!important;
+  border:1px solid #d9e4ef!important;
+  border-radius:22px!important;
+  box-shadow:0 12px 28px rgba(18,58,92,.13), inset 0 1px 0 rgba(255,255,255,.98)!important;
+  padding:22px 10px 22px!important;
+  box-sizing:border-box!important;
+}
+.need-help-icon{
+  width:58px!important;height:52px!important;min-width:58px!important;min-height:52px!important;
+  display:flex!important;align-items:center!important;justify-content:center!important;
+  margin:0 auto 10px!important;border-radius:16px!important;
+  background:linear-gradient(145deg,#174c70 0%,#123A5C 100%)!important;
+  box-shadow:0 7px 16px rgba(18,58,92,.20)!important;
+}
+.need-help-icon svg,.need-help-whatsapp-svg{
+  width:27px!important;height:27px!important;flex:0 0 27px!important;
+  display:block!important;margin:0!important;stroke:#fff!important;fill:none!important;transform:none!important;
+}
+.need-help-card strong{color:#123A5C!important;margin:0 0 5px!important;}
+.need-help-card small{color:#123A5C!important;margin:0 0 10px!important;}
+.need-help-card b{
+  margin:0 auto!important;padding-left:8px!important;padding-right:8px!important;
+  min-height:38px!important;height:38px!important;
+  border-radius:11px!important;box-shadow:0 5px 12px rgba(18,58,92,.13)!important;
+}
+.need-help-subheading{
+  margin:-3px auto 15px!important;text-align:center!important;color:#5B7285!important;
+  font-size:.72rem!important;line-height:1.35!important;white-space:nowrap!important;
+}
+@media(max-width:380px){
+  .need-help-card{padding:20px 8px 20px!important;border-radius:20px!important;}
+  .need-help-icon{width:54px!important;height:48px!important;min-width:54px!important;min-height:48px!important;border-radius:15px!important;margin-bottom:9px!important;}
+  .need-help-icon svg,.need-help-whatsapp-svg{width:25px!important;height:25px!important;flex-basis:25px!important;}
+  .need-help-card small{margin-bottom:10px!important;}
+  .need-help-card b{height:37px!important;min-height:37px!important;border-radius:10px!important;}
+  .need-help-subheading{font-size:.66rem!important;}
+}
+
+/* ---- next style block ---- */
+
+.d2-faq details:first-of-type{border-top:0!important;}
+.d2-faq{border-top:1px solid #e2e8ee!important;}
+
+/* ---- next style block ---- */
+
+/* Final requested tuning: bolder circle outline, narrower buttons, balanced vertical spacing. */
+.need-help-card{
+  padding:15px 8px 15px!important;
+}
+.need-help-icon{
+  width:58px!important;
+  height:58px!important;
+  flex-basis:58px!important;
+  border-width:3px!important;
+  margin:0 auto 12px!important;
+}
+.need-help-card strong{
+  margin:0 0 7px!important;
+}
+.need-help-card small{
+  margin:0 0 13px!important;
+}
+.need-help-card b{
+  width:calc(100% - 24px)!important;
+  min-height:37px!important;
+  height:37px!important;
+  padding:0 10px!important;
+  box-sizing:border-box!important;
+}
+@media(max-width:380px){
+  .need-help-card{padding:14px 7px 14px!important;}
+  .need-help-icon{width:54px!important;height:54px!important;flex-basis:54px!important;border-width:3px!important;margin-bottom:11px!important;}
+  .need-help-card small{margin-bottom:12px!important;}
+  .need-help-card b{width:calc(100% - 22px)!important;min-height:36px!important;height:36px!important;padding:0 9px!important;}
+}
+
+/* ---- next style block ---- */
+
+/* Match the circle outline weight to the bold Address / Call Us typography. */
+.need-help-icon{border-width:3px!important;}
+@media(max-width:380px){.need-help-icon{border-width:3px!important;}}
+
+/* ---- next style block ---- */
+
+.newsletter-form input,.newsletter-form button{height:40px!important;padding-top:4px!important;padding-bottom:4px!important;box-sizing:border-box!important;}.newsletter-form button{padding-left:10px!important;padding-right:10px!important;min-width:0!important;}
+
+/* ---- next style block ---- */
+
+.newsletter-section{display:flex!important;flex-direction:column!important;justify-content:center!important;box-sizing:border-box!important;}
+.newsletter-section .newsletter-form{margin-top:0!important;margin-bottom:0!important;gap:7px!important;}
+.newsletter-section > *{margin-top:0!important;margin-bottom:0!important;}
+.newsletter-section > h2{margin-bottom:10px!important;}
+.newsletter-section > p{margin-bottom:14px!important;}
+
+/* ---- next style block ---- */
+
+.newsletter-section{
+  margin:26px 21px 0!important;
+  padding:22px 16px 20px!important;
+  background:linear-gradient(180deg,#123f60 0%,#0f3552 100%)!important;
+  border-radius:18px!important;
+  box-sizing:border-box!important;
+  text-align:center!important;
+  box-shadow:0 3px 10px rgba(18,58,92,.10)!important;
+}
+.newsletter-section h2{
+  margin:0 0 7px!important;
+  color:#fff!important;
+  font-size:1.22rem!important;
+  line-height:1.2!important;
+  font-weight:800!important;
+}
+.newsletter-section p{
+  margin:0 auto 15px!important;
+  color:#dce8f1!important;
+  font-size:.78rem!important;
+  line-height:1.35!important;
+  font-weight:600!important;
+  max-width:330px!important;
+}
+.newsletter-form{
+  display:flex!important;
+  flex-direction:column!important;
+  gap:10px!important;
+  width:100%!important;
+}
+.newsletter-form input{
+  width:100%!important;
+  height:52px!important;
+  box-sizing:border-box!important;
+  border:1px solid #dbe5ec!important;
+  border-radius:14px!important;
+  background:#fff!important;
+  color:#123a5c!important;
+  padding:0 15px!important;
+  font-size:.88rem!important;
+  font-weight:600!important;
+  outline:none!important;
+}
+.newsletter-form input::placeholder{color:#8fa2b2!important;opacity:1!important;}
+.newsletter-form button{
+  width:100%!important;
+  height:52px!important;
+  border:0!important;
+  border-radius:14px!important;
+  background:#fff!important;
+  color:#123a5c!important;
+  font-size:.92rem!important;
+  font-weight:800!important;
+  cursor:pointer!important;
+}
+@media(max-width:380px){
+  .newsletter-section{margin-left:21px!important;margin-right:21px!important;padding:20px 14px 18px!important;}
+  .newsletter-section h2{font-size:1.15rem!important;}
+  .newsletter-section p{font-size:.74rem!important;}
+}
+
+/* ---- next style block ---- */
+
+.find-us-section{width:calc(100% - 42px)!important;margin-left:21px!important;margin-right:21px!important;}
+.newsletter-section{margin-left:21px!important;margin-right:21px!important;}
+@media(max-width:380px){
+  .find-us-section{width:calc(100% - 42px)!important;margin-left:21px!important;margin-right:21px!important;}
+  .newsletter-section{margin-left:21px!important;margin-right:21px!important;}
+}
+
+/* ---- next style block ---- */
+
+/* Final newsletter layout: same side gaps as the Still Have a Question card. */
+.newsletter-section{
+  width:calc(100% - 30px)!important;
+  margin:28px 15px 0!important;
+  padding:22px 16px 20px!important;
+  box-sizing:border-box!important;
+}
+.newsletter-form{
+  display:grid!important;
+  grid-template-columns:minmax(0,1fr) auto!important;
+  align-items:center!important;
+  gap:10px!important;
+  width:100%!important;
+}
+.newsletter-form input{
+  width:100%!important;
+  height:52px!important;
+  min-width:0!important;
+  margin:0!important;
+}
+.newsletter-form button{
+  width:auto!important;
+  min-width:132px!important;
+  height:52px!important;
+  margin:0!important;
+  padding:0 18px!important;
+  border:0!important;
+  border-radius:14px!important;
+  background:#FBBB18!important;
+  color:#123A5C!important;
+  font-size:.92rem!important;
+  font-weight:800!important;
+  white-space:nowrap!important;
+  cursor:pointer!important;
+}
+@media(max-width:380px){
+  .newsletter-section{
+    width:calc(100% - 30px)!important;
+    margin-left:15px!important;
+    margin-right:15px!important;
+    padding:20px 14px 18px!important;
+  }
+  .newsletter-form{
+    grid-template-columns:minmax(0,1fr) auto!important;
+    gap:8px!important;
+  }
+  .newsletter-form input{height:50px!important;padding:0 12px!important;font-size:.78rem!important;}
+  .newsletter-form button{height:50px!important;min-width:112px!important;padding:0 12px!important;font-size:.82rem!important;}
+}
+
+/* ---- next style block ---- */
+
+/* Final layout: map stretches edge-to-edge like newsletter; newsletter keeps section curves. */
+.find-us-section{
+  width:100%!important;
+  margin-left:0!important;
+  margin-right:0!important;
+}
+.newsletter-section{
+  width:100%!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  border-radius:18px!important;
+}
+
+/* ---- next style block ---- */
+
+.newsletter-section { padding-bottom: 22px !important; }
+.newsletter-section .newsletter-form { gap: 7px !important; margin-bottom: 0 !important; }
+.newsletter-section .newsletter-form input,
+.newsletter-section .newsletter-form button { margin-bottom: 0 !important; }
+
+/* ---- next style block ---- */
+
+/* Exact screen-edge alignment with the Still Have a Question card. */
+.find-us-section,
+.newsletter-section{
+  width:calc(100% - 30px)!important;
+  margin-left:15px!important;
+  margin-right:15px!important;
+  box-sizing:border-box!important;
+}
+@media(max-width:380px){
+  .find-us-section,
+  .newsletter-section{
+    width:calc(100% - 30px)!important;
+    margin-left:15px!important;
+    margin-right:15px!important;
+  }
+}
+
+/* ---- next style block ---- */
+
+/* Final: newsletter stretches fully left-to-right; button text stays Subscribe only. */
+.newsletter-section{
+  width:100%!important;
+  margin-left:0!important;
+  margin-right:0!important;
+  border-radius:0!important;
+}
+@media(max-width:380px){
+  .newsletter-section{
+    width:100%!important;
+    margin-left:0!important;
+    margin-right:0!important;
+  }
+}
+
+/* ---- next style block ---- */
+
+/* FINAL OVERRIDE: map and newsletter use the same full-width treatment; newsletter keeps rounded corners. */
+.find-us-section, .newsletter-section {
+  width: 100% !important;
+  max-width: none !important;
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  box-sizing: border-box !important;
+}
+.newsletter-section {
+  border-radius: 18px !important;
+}
+
+/* ---- next style block ---- */
+
+.newsletter-form{display:grid!important;grid-template-columns:minmax(0,1fr) auto!important;gap:10px!important;width:100%!important;box-sizing:border-box!important}
+.newsletter-form input{width:100%!important;min-width:0!important;box-sizing:border-box!important}
+.newsletter-form button{padding-left:10px!important;padding-right:10px!important;min-width:0!important;width:auto!important;white-space:nowrap!important}
+
+/* ---- next style block ---- */
+
+/* FINAL: reduce only the vertical inner padding/height of newsletter email + Subscribe controls. */
+.newsletter-section .newsletter-form input[type="email"],
+.newsletter-section .newsletter-form input {
+  height: 40px !important;
+  min-height: 40px !important;
+  max-height: 40px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  box-sizing: border-box !important;
+}
+.newsletter-section .newsletter-form button[type="submit"],
+.newsletter-section .newsletter-form button {
+  height: 40px !important;
+  min-height: 40px !important;
+  max-height: 40px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  box-sizing: border-box !important;
+  line-height: 40px !important;
+}
+
+/* ---- next style block ---- */
+
+/* FINAL: equal top/bottom inner spacing and slightly tighter input/button gap. */
+.newsletter-section{
+  padding-top:20px!important;
+  padding-bottom:20px!important;
+}
+.newsletter-section .newsletter-form{
+  gap:7px!important;
+}
+@media(max-width:380px){
+  .newsletter-section{
+    padding-top:18px!important;
+    padding-bottom:18px!important;
+  }
+  .newsletter-section .newsletter-form{
+    gap:7px!important;
+  }
+}
+
+/* ---- next style block ---- */
+
+input,select,textarea{font-size:16px!important}
+
+/* ---- next style block ---- */
+
+html,body{background:#f6f6f5!important;}
+
+/* ---- next style block ---- */
+
+/* Keep the FAQ row padding compact like the earlier version. */
+.d2-faq details summary{
+  min-height:64px!important;
+  padding:14px 66px 14px 16px!important;
+  box-sizing:border-box!important;
+}
+.d2-faq details[open] summary{
+  padding:14px 66px 10px 16px!important;
+}
+.d2-faq details summary::after{
+  right:18px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+
+/* ---- next style block ---- */
+
+/* Match the compact vertical padding/row height from the reference image. */
+.d2-faq details summary{
+  min-height:50px!important;
+  padding:10px 66px 10px 16px!important;
+  box-sizing:border-box!important;
+}
+.d2-faq details[open] summary{
+  min-height:50px!important;
+  padding:10px 66px 10px 16px!important;
+}
+.d2-faq details summary::after{
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+
+/* ---- next style block ---- */
+
+/* Header restored to normal opaque background (not transparent/floating). */
+.faq-header{
+  background:#f6f6f5!important;
+}
+.d2-faq details summary{
+  padding-top:12px!important;
+  padding-bottom:12px!important;
+  font-size:.86rem!important;
+}
+.d2-faq details[open] summary{
+  padding-top:12px!important;
+  padding-bottom:12px!important;
+}
+.d2-faq details summary::after{
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+.d2-faq details p{
+  font-size:.77rem!important;
+}
+
+/* ---- next style block ---- */
+
+/* Reduce only the space between the question and answer; keep bottom answer padding unchanged. */
+.d2-faq details[open] p{
+  margin-top:-5px!important;
+  padding-top:0!important;
+  margin-bottom:16px!important;
+}
+
+/* ---- next style block ---- */
+
+.d2-faq details{display:none !important;}
+.d2-faq details[data-cat="booking"]{display:block !important;}
+.faq-category-strip,.faq-category-strip .faq-cat{position:relative !important;z-index:50 !important;pointer-events:auto !important;}
+.faq-category-strip .faq-cat{cursor:pointer !important;touch-action:manipulation !important;}
+
+/* ---- next style block ---- */
+
+.need-help-section{background:linear-gradient(180deg,#ffffff 0%,#f3f6f8 100%)!important;}
+.need-help-cards{grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:12px!important;}
+.need-help-card{min-height:190px!important;padding:16px 10px 14px!important;border-radius:16px!important;}
+.need-help-icon{width:58px!important;height:48px!important;flex:0 0 58px!important;margin:0 auto 10px!important;border-radius:14px!important;background:#fff!important;box-shadow:0 4px 12px rgba(18,58,92,.10)!important;}
+.need-help-icon svg{width:27px!important;height:27px!important;stroke:#123A5C!important;stroke-width:2!important;}
+.need-help-card strong{font-size:1.08rem!important;line-height:1.2!important;margin-bottom:7px!important;}
+.need-help-card small{font-size:.72rem!important;line-height:1.45!important;min-height:38px!important;margin-bottom:11px!important;}
+.need-help-card b{width:100%!important;min-height:36px!important;height:36px!important;display:flex!important;align-items:center!important;justify-content:center!important;padding:0 10px!important;border-radius:9px!important;font-size:.68rem!important;line-height:1!important;box-sizing:border-box!important;}
+@media(max-width:380px){.need-help-cards{gap:9px!important}.need-help-card{min-height:184px!important}.need-help-card strong{font-size:1rem!important}.need-help-card small{font-size:.66rem!important}.need-help-card b{font-size:.64rem!important}}
+
+/* ---- next style block ---- */
+
+.need-help-section{background:linear-gradient(180deg,#ffffff 0%,#f3f6f8 55%,#e9eef2 100%)!important;background-color:#fff!important;}
+.need-help-card{background:#fff!important;}
+.need-help-card b{font-size:.82rem!important;font-weight:900!important;letter-spacing:.01em!important;color:#fff!important;min-height:40px!important;height:40px!important;padding:0 12px!important;line-height:1!important;}
+@media(max-width:380px){.need-help-card b{font-size:.76rem!important;min-height:38px!important;height:38px!important;}}
+
+/* ---- next style block ---- */
+
+.need-help-section{background:linear-gradient(180deg,#ffffff 0%,#f3f6f8 100%)!important;}
+.need-help-card{background:#123A5C!important;color:#fff!important;}
+.need-help-card strong,.need-help-card small{color:#fff!important;}
+.need-help-icon{background:#fff!important;border-color:#fff!important;}
+.need-help-icon svg{stroke:#123A5C!important;}
+.need-help-card b{background:#123A5C!important;color:#fff!important;border:1px solid rgba(255,255,255,.75)!important;font-size:.76rem!important;font-weight:900!important;min-height:38px!important;height:38px!important;}
+
+/* ---- next style block ---- */
+
+.need-help-icon{background:#123A5C!important;border-radius:14px!important;box-shadow:0 5px 14px rgba(18,58,92,.18)!important;border:1px solid rgba(18,58,92,.12)!important;}.need-help-icon svg{stroke:#fff!important;}
+
+/* ---- next style block ---- */
+
+/* Final Get In Touch polish: WhatsApp glyph from the supplied reference image. */
+.need-help-card small{margin-bottom:5px!important;}
+.need-help-card b{width:calc(100% - 16px)!important;margin-left:auto!important;margin-right:auto!important;padding-left:6px!important;padding-right:6px!important;}
+.need-help-icon{width:58px!important;height:48px!important;flex:0 0 58px!important;border-radius:14px!important;background:#123A5C!important;display:grid!important;place-items:center!important;box-shadow:0 5px 14px rgba(18,58,92,.16)!important;}
+.need-help-icon svg{width:27px!important;height:27px!important;stroke:#fff!important;}
+.need-help-whatsapp-img{width:30px!important;height:30px!important;object-fit:contain!important;display:block!important;}
+@media(max-width:380px){
+  .need-help-card small{margin-bottom:4px!important;}
+  .need-help-card b{width:calc(100% - 12px)!important;padding-left:5px!important;padding-right:5px!important;}
+  .need-help-icon{width:54px!important;height:46px!important;flex-basis:54px!important;}
+  .need-help-whatsapp-img{width:28px!important;height:28px!important;}
+}
+
+/* ---- next style block ---- */
+
+.need-help-whatsapp-svg{width:27px!important;height:27px!important;display:block!important;overflow:visible!important;}
+.need-help-whatsapp-svg circle{stroke:#fff!important;}
+.need-help-whatsapp-svg path{stroke:#fff!important;}
+.need-help-whatsapp-svg path:last-child{fill:#fff!important;stroke:none!important;}
+.need-help-whatsapp-img{display:none!important;}
+.need-help-icon{background:#123A5C!important;border-radius:14px!important;}
+@media(max-width:380px){.need-help-whatsapp-svg{width:26px!important;height:26px!important;}}
+
+/* ---- next style block ---- */
+
+.need-help-section{
+  background:linear-gradient(180deg,#ffffff 0%,#f7f9fb 48%,#eef2f5 100%)!important;
+}
+.need-help-cards{gap:14px!important;}
+.need-help-card{
+  background:linear-gradient(145deg,#ffffff 0%,#fbfcfd 100%)!important;
+  border:1px solid #e2e7ec!important;
+  border-radius:22px!important;
+  box-shadow:0 10px 24px rgba(18,58,92,.12),0 2px 5px rgba(18,58,92,.06)!important;
+  padding:14px 10px 14px!important;
+}
+.need-help-icon{
+  width:60px!important;height:60px!important;
+  flex:0 0 60px!important;
+  margin:0 auto 10px!important;
+  border-radius:18px!important;
+  background:#123A5C!important;
+  display:grid!important;place-items:center!important;
+  box-shadow:0 7px 15px rgba(18,58,92,.18)!important;
+}
+.need-help-icon svg{
+  width:29px!important;height:29px!important;
+  margin:0!important;
+  display:block!important;
+  stroke:#fff!important;
+}
+.need-help-card strong{margin-bottom:6px!important;}
+.need-help-card small{margin-bottom:15px!important;min-height:34px!important;}
+.need-help-card b{
+  width:calc(100% - 12px)!important;
+  margin:0 auto!important;
+  min-height:38px!important;height:38px!important;
+  padding:0 8px!important;
+  border-radius:10px!important;
+  font-size:.70rem!important;
+}
+@media(max-width:380px){
+ .need-help-cards{gap:11px!important}
+ .need-help-card{border-radius:20px!important}
+ .need-help-icon{width:56px!important;height:56px!important;flex-basis:56px!important;border-radius:17px!important}
+ .need-help-icon svg{width:27px!important;height:27px!important}
+ .need-help-card small{margin-bottom:13px!important}
+ .need-help-card b{width:calc(100% - 10px)!important;font-size:.67rem!important}
+}
+
+/* ---- next style block ---- */
+
+/* Revert only the latest divider + Get In Touch spacing changes. Keep clean call icon. */
+.d2-faq{border-top-color:#d7e2ea!important;}
+.d2-faq details:first-child{border-top:0!important;}
+.need-help-section > .need-help-heading{margin-bottom:5px!important;}
+.need-help-section > .need-help-subheading{margin-bottom:12px!important;}
+
+/* ---- next style block ---- */
+
+/* Keep all four outer FAQ card edges exactly the same: one subtle 1px line. */
+.d2-faq{border:1px solid #dbe5ec!important;outline:0!important;box-shadow:0 14px 30px rgba(18,58,92,.13),0 3px 8px rgba(18,58,92,.06)!important;}
+.d2-faq details:first-child{border-top:0!important;}
+
+/* ---- next style block ---- */
+
+/* Keep one subtle outer outline around the whole questions box; remove the duplicate top line on the first question. */
+.d2-faq{border:1px solid #dfe5ea!important; border-radius:16px!important; overflow:hidden!important;}
+.d2-faq details:first-of-type{border-top:0!important; box-shadow:none!important;}
+.d2-faq details:first-of-type summary{border-top:0!important; box-shadow:none!important;}
+
+/* ---- next style block ---- */
+
+/* The first visible question was inheriting a divider from the hidden question before it, creating a double top line. Keep only the outer outline on the first visible row. */
+.d2-faq details + details{border-top:0!important;}
+.d2-faq details[data-cat="booking"] + details[data-cat="booking"],
+.d2-faq details[data-cat="service"] + details[data-cat="service"],
+.d2-faq details[data-cat="ride"] + details[data-cat="ride"],
+.d2-faq details[data-cat="payment"] + details[data-cat="payment"]{border-top:1px solid #dbe5ec!important;}
+.d2-faq details:first-child{border-top:0!important;}
+
+/* ---- next style block ---- */
+
+/* SINGLE SOURCE OF TOP EDGE: the FAQ card owns the outer line; no question may draw a top line. */
+.d2-faq{
+  border:1px solid #dbe5ec!important;
+  outline:0!important;
+}
+.d2-faq > details{
+  border-top:0!important;
+  box-shadow:none!important;
+}
+.d2-faq > details + details{
+  border-top:0!important;
+}
+.d2-faq > details[data-cat="booking"] + details[data-cat="booking"],
+.d2-faq > details[data-cat="service"] + details[data-cat="service"],
+.d2-faq > details[data-cat="ride"] + details[data-cat="ride"],
+.d2-faq > details[data-cat="payment"] + details[data-cat="payment"]{
+  border-top:1px solid #dbe5ec!important;
+}
+.d2-faq > details > summary{
+  border-top:0!important;
+  box-shadow:none!important;
+}
+
+/* ---- next style block ---- */
+
+/* Final Get In Touch visual refinement: outlined blue circles, balanced typography spacing. */
+.need-help-section > .need-help-heading{
+  font-size:.88rem!important;
+  font-weight:700!important;
+}
+.need-help-icon{
+  width:52px!important;
+  height:52px!important;
+  flex:0 0 52px!important;
+  border-radius:50%!important;
+  background:transparent!important;
+  border:2px solid #124b75!important;
+  box-shadow:none!important;
+  margin:0 auto 12px!important;
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+}
+.need-help-icon svg,
+.need-help-whatsapp-svg{
+  width:25px!important;
+  height:25px!important;
+  color:#124b75!important;
+}
+.need-help-icon svg path,
+.need-help-icon svg rect,
+.need-help-icon svg circle{
+  stroke:#124b75!important;
+}
+.need-help-icon .need-help-whatsapp-svg path{
+  fill:#124b75!important;
+  stroke:none!important;
+}
+.need-help-card:first-child .need-help-icon svg{
+  stroke-width:1.75!important;
+  fill:none!important;
+}
+.need-help-card strong{
+  font-size:.90rem!important;
+  line-height:1.15!important;
+  margin:0 0 8px!important;
+}
+.need-help-card small{
+  font-size:.62rem!important;
+  line-height:1.3!important;
+  min-height:27px!important;
+  margin:0 0 12px!important;
+}
+.need-help-card b{
+  min-height:35px!important;
+  height:35px!important;
+  font-size:.72rem!important;
+  line-height:1!important;
+  font-weight:800!important;
+}
+@media(max-width:380px){
+  .need-help-icon{
+    width:49px!important;height:49px!important;flex-basis:49px!important;
+    border-radius:50%!important;margin-bottom:11px!important;
+  }
+  .need-help-icon svg,.need-help-whatsapp-svg{width:23px!important;height:23px!important;}
+  .need-help-card strong{font-size:.86rem!important;margin-bottom:7px!important;}
+  .need-help-card small{font-size:.59rem!important;min-height:26px!important;margin-bottom:11px!important;}
+  .need-help-card b{min-height:34px!important;height:34px!important;font-size:.69rem!important;}
+}
+
+/* ---- next style block ---- */
+
+/* Match the circle outline visually to the bold Call Us / Address headings. */
+.need-help-icon{
+  border-width:4px!important;
+}
+@media(max-width:380px){
+  .need-help-icon{border-width:4px!important;}
+}
+
+/* ---- next style block ---- */
+
+.faq-header-nav.d2-menu-open{
+  display:flex!important;
+  position:absolute!important;
+  top:100%!important;
+  left:12px!important;
+  right:12px!important;
+  z-index:999!important;
+  background:#fff!important;
+  border:1px solid #E4E9EF!important;
+  border-radius:14px!important;
+  box-shadow:0 12px 28px rgba(18,58,92,.16)!important;
+  padding:10px!important;
+  flex-direction:column!important;
+  gap:2px!important;
+}
+.faq-header-nav.d2-menu-open a{
+  display:block!important;
+  padding:12px 14px!important;
+  font-size:.85rem!important;
+  font-weight:700!important;
+  color:#123A5C!important;
+  border-radius:9px!important;
+  text-decoration:none!important;
+}
+.faq-header-nav.d2-menu-open a:active{background:#F5F7FA!important;}
+.faq-header{position:fixed!important;top:0!important;left:0!important;right:0!important;width:100%!important;max-width:430px!important;margin:0 auto!important;z-index:200!important;}
+.faq-page{padding-top:64px!important;}
+
+/* ---- next style block ---- */
+
+.faq-header{transition:transform .28s ease!important;}
+.faq-header.d2-header-hidden{transform:translateY(-100%)!important;}
+
+/* ---- next style block ---- */
+
+#d2Homepage .d2-faq{
+  background:linear-gradient(180deg,#ffffff 0%,#f8fbfd 100%)!important;
+  border:1px solid #d7e2ea!important;
+  border-radius:18px!important;
+  box-shadow:0 14px 30px rgba(18,58,92,.13),0 3px 8px rgba(18,58,92,.06)!important;
+  overflow:hidden!important;
+}
+#d2Homepage .d2-faq details{
+  background:linear-gradient(180deg,#ffffff 0%,#fbfdfe 100%)!important;
+  border-top:0!important;
+  box-shadow:none!important;
+}
+#d2Homepage .d2-faq details[data-cat="booking"] + details[data-cat="booking"],
+#d2Homepage .d2-faq details[data-cat="service"] + details[data-cat="service"],
+#d2Homepage .d2-faq details[data-cat="ride"] + details[data-cat="ride"],
+#d2Homepage .d2-faq details[data-cat="payment"] + details[data-cat="payment"]{
+  border-top:1px solid #dbe5ec!important;
+}
+#d2Homepage .d2-faq details:first-child,
+#d2Homepage .d2-faq details:nth-child(9),
+#d2Homepage .d2-faq details:nth-child(17),
+#d2Homepage .d2-faq details:nth-child(25){
+  border-top:0!important;
+  box-shadow:none!important;
+}
+#d2Homepage .d2-faq summary{
+  position:relative!important;
+  background:transparent!important;
+  padding:16px 60px 16px 16px!important;
+  font-size:.86rem!important;
+  font-weight:800!important;
+}
+#d2Homepage .d2-faq details[open] summary{
+  padding-top:16px!important;
+  padding-bottom:16px!important;
+}
+#d2Homepage .d2-faq details p{
+  font-size:.77rem!important;
+  font-weight:700!important;
+  margin:-6px 16px 16px!important;
+  padding-top:2px!important;
+  color:#647b8d!important;
+  line-height:1.55!important;
+  border-top:0!important;
+}
+#d2Homepage .d2-faq details summary::after{
+  content:"+";
+  position:absolute!important;
+  right:16px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  width:26px!important;
+  height:26px!important;
+  border-radius:50%!important;
+  display:grid!important;
+  place-items:center!important;
+  font-size:16px!important;
+  line-height:1!important;
+  box-shadow:none!important;
+  border:1.5px solid transparent!important;
+  background:#123A5C!important;
+  color:#edf4f8!important;
+}
+#d2Homepage .d2-faq details[open] summary::after{
+  content:"−";
+  background:#edf4f8!important;
+  color:#123A5C!important;
+  border:1.5px solid #c7d1d9!important;
+}
+
+/* ---- next style block ---- */
+
+.d2-auth-overlay{position:fixed;inset:0;background:rgba(18,58,92,.55);display:none;align-items:flex-end;justify-content:center;z-index:999;backdrop-filter:blur(2px)}
+.d2-auth-overlay.open{display:flex}
+.d2-auth-card{background:#fff;width:100%;max-width:430px;border-radius:22px 22px 0 0;padding:34px 22px 32px;position:relative;box-shadow:0 -6px 30px rgba(18,58,92,.25);animation:d2AuthUp .28s ease;max-height:92vh;overflow-y:auto}
+@keyframes d2AuthUp{from{transform:translateY(24px);opacity:0}to{transform:translateY(0);opacity:1}}
+.d2-auth-close{position:absolute;top:14px;right:16px;width:38px;height:38px;border-radius:12px;background:#123A5C;border:1.5px solid #123A5C;color:#fff;display:flex;align-items:center;justify-content:center;cursor:pointer;padding:0}
+.d2-auth-close svg{width:18px;height:18px;stroke:#fff;stroke-width:2.4;stroke-linecap:round;fill:none;display:block}
+.d2-auth-close:active{background:#0B2A44}
+.d2-auth-title{color:#123A5C;font-size:1.28rem;font-weight:900;margin:6px 0 4px;text-align:center}
+.d2-auth-sub{color:#5B7285;font-size:.82rem;font-weight:400;margin:0 0 20px;text-align:center}
+.d2-field{background:#F5F7FA;border:1.5px solid #C7D1D9;border-radius:16px;padding:11px 15px;margin-bottom:12px;transition:border-color .15s ease}
+.d2-field:focus-within{border-color:#123A5C}
+.d2-field label{display:block;font-size:.66rem;font-weight:900;color:#123A5C;letter-spacing:.5px;text-transform:uppercase;margin-bottom:3px}
+.d2-field-row{display:flex;align-items:center;gap:10px}
+.d2-field-row input{flex:1;min-width:0;border:0;background:transparent;outline:none;font-size:16px;font-weight:400;color:#123A5C;padding:2px 0;font-family:inherit}
+.d2-field-row input::placeholder{color:#9FB0BF;font-weight:400}
+.d2-pass-toggle{border:0;background:transparent;padding:0;display:flex;flex:0 0 auto;cursor:pointer}
+.d2-pass-toggle svg{width:21px;height:21px;stroke:#123A5C;stroke-width:2.3;fill:none}
+.d2-eye-icon .slash{display:none}
+.d2-eye-icon.is-hidden .slash{display:inline}
+.d2-auth-submit{width:100%;height:49px;border:0;border-radius:14px;background:#123A5C;color:#fff;font-weight:900;font-size:.9rem;cursor:pointer;margin-top:8px;letter-spacing:.2px}
+.d2-auth-submit:active{transform:scale(.98)}
+.d2-auth-links{display:flex;justify-content:space-between;margin-top:16px;font-size:.78rem}
+.d2-auth-links a{color:#123A5C;font-weight:800;text-decoration:none;cursor:pointer}
+.d2-auth-error{color:#C0392B;font-size:.75rem;font-weight:700;margin-top:10px;min-height:14px}
+.d2-auth-error:empty{margin-top:0;min-height:0}
+.d2-auth-hint{color:#8FA1B3;font-size:.7rem;font-weight:600;margin-top:8px}
+.d2-auth-switch{text-align:center;font-size:.8rem;color:#5B7285;font-weight:600;margin-top:8px}
+.d2-auth-switch a{color:#123A5C;font-weight:900;text-decoration:none;cursor:pointer}
+#d2AccountMenu{position:fixed;top:74px;right:10px;background:#fff;border:1.5px solid #E4E9EF;border-radius:14px;box-shadow:0 8px 24px rgba(18,58,92,.18);padding:8px;display:none;z-index:998;min-width:150px}
+#d2AccountMenu.open{display:block}
+#d2AccountMenu button{width:100%;text-align:left;background:none;border:0;padding:10px 12px;font-size:.8rem;color:#123A5C;font-weight:800;border-radius:9px;cursor:pointer}
+#d2AccountMenu button:active{background:#EDF0F3}
+
+.d2-auth-divider{display:flex;align-items:center;gap:10px;margin:16px 0;color:#9FB0BF;font-size:.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.4px}
+.d2-auth-divider:before,.d2-auth-divider:after{content:'';flex:1;height:1px;background:#E4E9EF}
+.d2-social-row{display:flex;gap:14px;justify-content:center;margin:0 0 16px}
+.d2-social-btn{width:44px;height:44px;border-radius:50%;border:0;background:#123A5C;color:#fff;display:grid;place-items:center;cursor:pointer}
+.d2-social-btn:active{background:#0B2A44}
+.d2-social-btn svg{width:20px;height:20px;display:block;fill:currentColor}
+.d2-social-btn[data-provider="Facebook"] svg{width:21px;height:21px}
+.d2-social-note{text-align:center;font-size:.7rem;color:#93A5B5;margin:0}
+.d2-social-note:empty{margin:0}
+
+/* ---- next style block ---- */
+
+.need-help-card{
+  background:linear-gradient(145deg,#ffffff 0%,#fbfdff 48%,#eef4f8 100%)!important;
+  box-shadow:0 10px 24px rgba(18,58,92,.11),inset 0 1px 0 rgba(255,255,255,.95)!important;
+  padding-bottom:16px!important;
+}
+.need-help-card b{
+  margin-top:0!important;
+  margin-bottom:0!important;
+}
+.need-help-icon{margin-top:0!important;}
+@media(max-width:380px){
+  .need-help-card{padding-bottom:13px!important;}
+}
+
+/* ---- next style block ---- */
+
+/* Match Get In Touch subtitle to Still Have a Question subtitle. */
+.need-help-heading{margin-bottom:5px!important;}
+.need-help-subheading{
+  display:block!important;
+  width:100%!important;
+  margin:0 0 12px!important;
+  padding:0!important;
+  text-align:center!important;
+  color:#5B7285!important;
+  font-size:.84rem!important;
+  line-height:1.4!important;
+  font-weight:600!important;
+  opacity:1!important;
+  visibility:visible!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+}
+@media(max-width:380px){
+  .need-help-subheading{font-size:.84rem!important;line-height:1.4!important;}
+}
+
+/* ---- next style block ---- */
+
+/* Privacy Policy: clean, open layout with bold hierarchy and bullet points */
+#d2Homepage section[aria-labelledby="privacyHeading"] .d2-panel{
+  background:transparent!important;
+  border:0!important;
+  box-shadow:none!important;
+  border-radius:0!important;
+  padding:0!important;
+  margin:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-intro{
+  margin:0 0 24px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-intro p{
+  margin:0!important;
+  color:#4c6577!important;
+  font-size:.85rem!important;
+  line-height:1.65!important;
+  font-weight:550!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-content{
+  margin:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item{
+  margin:0 0 22px!important;
+  padding:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item:last-child{
+  margin-bottom:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  margin:0 0 8px!important;
+  color:#123A5C!important;
+  font-size:.95rem!important;
+  line-height:1.4!important;
+  font-weight:700!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  margin:0!important;
+  padding-left:20px!important;
+  color:#4c6577!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  margin:0 0 7px!important;
+  padding-left:3px!important;
+  color:#4c6577!important;
+  font-size:.85rem!important;
+  line-height:1.6!important;
+  font-weight:550!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li:last-child{
+  margin-bottom:0!important;
+}
+
+/* ---- next style block ---- */
+
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  display:list-item!important;
+  list-style-type:disc!important;
+  list-style-position:outside!important;
+  margin-left:20px!important;
+}
+
+/* ---- next style block ---- */
+
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  font-size:1.1rem!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::marker{
+  font-size:1.1rem!important;
+}
+
+/* ---- next style block ---- */
+
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::marker{
+  font-size:1.5rem!important;
+}
+
+/* ---- next style block ---- */
+
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  line-height:1.65!important;
+  margin-bottom:9px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li strong{
+  font-weight:650!important;
+}
+
+/* ---- next style block ---- */
+
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  display:block!important;
+  position:relative!important;
+  margin:0 0 5px!important;
+  padding:0 0 0 36px!important;
+  font-size:1.1rem!important;
+  line-height:1.4!important;
+  font-weight:700!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  content:"•"!important;
+  position:absolute!important;
+  left:0!important;
+  top:-1px!important;
+  font-size:1.5rem!important;
+  line-height:1.1!important;
+  font-weight:700!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  list-style:none!important;
+  margin:0!important;
+  padding:0 0 0 36px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  position:relative!important;
+  margin:0 0 9px!important;
+  padding:0!important;
+  font-size:.85rem!important;
+  line-height:1.65!important;
+  font-weight:550!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  content:"•"!important;
+  position:absolute!important;
+  left:-24px!important;
+  top:0!important;
+  font-size:1.1rem!important;
+  line-height:1.5!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li strong{
+  font-weight:650!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] a{
+  color:#123A5C!important;
+  font-weight:650!important;
+  text-decoration:underline!important;
+  text-underline-offset:2px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item{
+  margin-bottom:20px!important;
+}
+
+/* ---- next style block ---- */
+
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  padding-left:32px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  left:0!important;
+  font-size:1.8rem!important;
+  line-height:1!important;
+  top:-2px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  padding-left:32px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  margin-bottom:7px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  left:-32px!important;
+  font-size:1.15rem!important;
+  line-height:1.5!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3 + ul{
+  margin-top:0!important;
+}
+
+/* ---- next style block ---- */
+
+/* Final privacy-policy bullet alignment */
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  padding-left:38px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  left:0!important;
+  font-size:2.15rem!important;
+  line-height:1!important;
+  top:-5px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  padding-left:24px!important;
+  margin-top:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  padding-left:0!important;
+  margin-bottom:7px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  left:-24px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  font-size:1rem!important;
+  line-height:1!important;
+}
+
+/* ---- next style block ---- */
+
+/* Heading text and description text start on the same left edge */
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  padding-left:38px!important;
+  margin-left:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  left:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  padding-left:38px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  position:relative!important;
+  padding-left:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  left:-38px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+
+/* ---- next style block ---- */
+
+/* Match description start with heading and keep bullets on the same vertical line */
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  padding-left:38px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  padding-left:32px!important;
+  margin-top:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  padding-left:0!important;
+  margin-bottom:7px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  left:-32px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+
+/* ---- next style block ---- */
+
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  padding-left:26px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  left:-26px!important;
+}
+
+/* ---- next style block ---- */
+
+/* Keep heading and description typography aligned from the same left edge */
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  display:block!important;
+  position:relative!important;
+  margin-left:0!important;
+  padding-left:38px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  content:"•"!important;
+  position:absolute!important;
+  left:0!important;
+  top:-6px!important;
+  font-size:2.15rem!important;
+  line-height:1!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  list-style:none!important;
+  padding-left:38px!important;
+  margin-top:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  position:relative!important;
+  padding-left:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  content:"•"!important;
+  position:absolute!important;
+  left:-38px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  font-size:1rem!important;
+  line-height:1!important;
+}
+
+/* ---- next style block ---- */
+
+/* Keep both bullets at the left; bring heading and description text closer to them */
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  margin-left:0!important;
+  padding-left:28px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  left:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  padding-left:28px!important;
+  margin-top:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  padding-left:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  left:-28px!important;
+}
+
+/* ---- next style block ---- */
+
+/* Only bullet sizes/alignment — everything else unchanged */
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  font-size:2.45rem!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  font-size:1.2rem!important;
+  left:-28px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+
+/* ---- next style block ---- */
+
+/* Only fix bullet/text alignment and bullet sizes */
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  position:relative!important;
+  display:block!important;
+  margin-left:0!important;
+  padding-left:30px!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  content:"•"!important;
+  position:absolute!important;
+  left:0!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  font-size:2.35rem!important;
+  line-height:1!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  list-style:none!important;
+  padding-left:30px!important;
+  margin-top:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  position:relative!important;
+  padding-left:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  content:"•"!important;
+  position:absolute!important;
+  left:-30px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+  font-size:1.25rem!important;
+  line-height:1!important;
+}
+
+/* ---- next style block ---- */
+
+/* ALIGNMENT ONLY: fixed bullet column + fixed content column */
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item{
+  position:relative!important;
+  display:grid!important;
+  grid-template-columns:30px minmax(0,1fr)!important;
+  column-gap:0!important;
+  margin-left:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3{
+  grid-column:2!important;
+  position:relative!important;
+  margin-left:0!important;
+  padding-left:0!important;
+  display:block!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  left:-30px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item ul{
+  grid-column:2!important;
+  padding-left:0!important;
+  margin-left:0!important;
+  margin-top:0!important;
+  list-style:none!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li{
+  position:relative!important;
+  padding-left:0!important;
+  margin-left:0!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  left:-30px!important;
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+
+/* ---- next style block ---- */
+
+/* VERTICAL ALIGNMENT ONLY — do not alter horizontal/grid/layout rules */
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item h3::before{
+  top:50%!important;
+  transform:translateY(-50%)!important;
+}
+#d2Homepage section[aria-labelledby="privacyHeading"] .privacy-item li::before{
+  top:0.825em!important;
+  transform:translateY(-50%)!important;
+}
+
+/* ============================================================
+   FINAL RESPONSIVE SAFETY NET
+   Placed at the very end of the file on purpose so it wins over
+   earlier conflicting rules. Guarantees: (1) the page never
+   scrolls sideways or gets a horizontal scrollbar on any device,
+   (2) images/media never overflow their container, (3) very
+   small phones (under ~360px) and very large monitors both still
+   look correct instead of clipped or stretched too wide.
+   ============================================================ */
+html, body {
+  max-width: 100%;
+  overflow-x: hidden !important;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+  min-width: 0;
+}
+img, svg, video, canvas {
+  max-width: 100%;
+  height: auto;
+}
+.phone {
+  width: 100% !important;
+  box-sizing: border-box;
+}
+@media (max-width: 359px) {
+  .phone { padding-left: 6px !important; padding-right: 6px !important; }
+}
+@media (min-width: 1440px) {
+  .phone { max-width: 1040px !important; }
+}
