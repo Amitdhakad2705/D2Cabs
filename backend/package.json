@@ -9,6 +9,7 @@
     "start": "node src/server.js",
     "seed:admin": "node scripts/seedAdmin.js",
     "seed:cabs": "node scripts/seedCabs.js",
+    "repair:cabs": "node scripts/repairCabs.js",
     "test": "node --test tests/*.test.js",
     "reset:admin-password": "node scripts/resetAdminPassword.js"
   },
