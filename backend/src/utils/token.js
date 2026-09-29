@@ -20,7 +20,7 @@ export function verifyToken(token) {
 const baseCookie = () => ({
   httpOnly: true, // JavaScript in the browser cannot read it (protects against XSS theft)
   secure: env.isProd, // HTTPS only in production
-  sameSite: 'lax',
+  sameSite: env.isProd ? 'none' : 'lax',
   path: '/',
 });
 
