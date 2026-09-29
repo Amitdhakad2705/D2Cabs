@@ -42,7 +42,8 @@ export default function LegacyPage({ html, cssHref, jsSrc }) {
 
     // Shared scripts first (API client, then login popup), then the page's own script.
     // The API base URL comes from VITE_API_BASE_URL (default '/api' = Vite dev proxy).
-    window.__D2_API_BASE__ = import.meta.env.VITE_API_BASE_URL || '/api';
+    const apiBase = String(import.meta.env.VITE_API_BASE_URL || '/api').replace(/\/+$/, '');
+    window.__D2_API_BASE__ = apiBase.endsWith('/api') ? apiBase : `${apiBase}/api`;
     const sharedScripts = ['/js/d2api.js', '/js/d2auth.js'].map((src) => {
       const el = document.createElement('script');
       el.src = src;
