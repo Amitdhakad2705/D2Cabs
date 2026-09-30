@@ -8097,7 +8097,7 @@ html,body{background:#f6f6f5!important;}
 
 /* ---- next style block ---- */
 
-html,body{overflow-y:visible!important;}
+/* html,body{overflow-y:visible!important;} */
 
 /* ---- next style block ---- */
 
@@ -8285,10 +8285,26 @@ html,body{overflow-y:visible!important;}
    small phones (under ~360px) and very large monitors both still
    look correct instead of clipped or stretched too wide.
    ============================================================ */
-html, body {
+/* html, body {
   max-width: 100%;
   overflow-x: hidden !important;
-}
+} */
+
+ html,
+ body {
+   width: 100%;
+   max-width: 100%;
+   overflow-x: hidden !important;
+   overflow-y: auto !important;
+  }
+
+ body {
+   min-height: 100vh;
+   margin: 0;
+  }
+
+
+
 *, *::before, *::after {
   box-sizing: border-box;
   min-width: 0;
@@ -8306,4 +8322,38 @@ img, svg, video, canvas {
 }
 @media (min-width: 1440px) {
   .phone { max-width: 1040px !important; }
+}
+/* =========================================================
+   FINAL PAGE SCROLL FIX
+   html = page scroll container
+   body = normal document flow
+   ========================================================= */
+
+html {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: auto !important;
+  overflow-x: hidden !important;
+  overflow-y: auto !important;
+  overscroll-behavior-y: auto !important;
+  scroll-behavior: auto !important;
+}
+
+body {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100%;
+  height: auto !important;
+  margin: 0;
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  overscroll-behavior-y: auto !important;
+  scroll-behavior: auto !important;
+}
+
+#root {
+  min-height: 100vh;
+  height: auto !important;
+  overflow: visible !important;
 }

@@ -1242,13 +1242,15 @@ document.addEventListener('DOMContentLoaded',function(){var label=document.query
     overlay.querySelector('.payment-processing-card').classList.remove('success');
     overlay.classList.add('show');
     overlay.setAttribute('aria-hidden', 'false');
-    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflowY = 'hidden';
+    document.body.style.overflowY = 'hidden';
   }
   function hidePaymentProcessing(){
     const overlay = document.getElementById('paymentProcessingOverlay');
     overlay.classList.remove('show');
     overlay.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
+    document.documentElement.style.overflowY = '';
+    document.body.style.overflowY = '';
   }
   function showPaymentSuccessAnimation(onComplete){
     const overlay = document.getElementById('paymentProcessingOverlay');

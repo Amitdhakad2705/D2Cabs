@@ -15,15 +15,29 @@
     refreshHeader();
     listeners.forEach(function (cb) { try { cb(currentUser); } catch (e) { /* ignore */ } });
   }
-
+  // function openModal(panel) {
+  //   ['d2LoginPanel', 'd2SignupPanel', 'd2ForgotPanel'].forEach(function (id) {
+  //     document.getElementById(id).hidden = true;
+  //   });
+  //   document.getElementById(panel).hidden = false;
+  //   overlay.classList.add('open');
+  // }
+  // function closeModal() { overlay.classList.remove('open'); }
   function openModal(panel) {
-    ['d2LoginPanel', 'd2SignupPanel', 'd2ForgotPanel'].forEach(function (id) {
-      document.getElementById(id).hidden = true;
-    });
+   ['d2LoginPanel', 'd2SignupPanel', 'd2ForgotPanel'].forEach(function (id) {
+    document.getElementById(id).hidden = true;
+  });
     document.getElementById(panel).hidden = false;
     overlay.classList.add('open');
+    document.documentElement.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden';
   }
-  function closeModal() { overlay.classList.remove('open'); }
+
+  function closeModal() {
+   overlay.classList.remove('open');
+   document.documentElement.style.overflow = '';
+   document.body.style.overflow = '';
+  }
 
   function refreshHeader() {
     if (currentUser) {
