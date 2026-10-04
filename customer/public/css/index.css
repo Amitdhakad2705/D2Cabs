@@ -8357,3 +8357,128 @@ body {
   height: auto !important;
   overflow: visible !important;
 }
+/* =========================================================
+   FINAL DESKTOP FULL-WIDTH FIX
+   Header = full viewport on every page
+   Home hero/booking section = full viewport
+   Mobile layout remains unchanged
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+  /* Full-width header on ALL customer pages */
+  .faq-header {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Full-width HOME page section */
+  .d2-booking-stage {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    box-sizing: border-box !important;
+  }
+
+}
+/* =========================================================
+   FINAL DESKTOP FULL-WIDTH LAYOUT
+   ALL CUSTOMER PAGES
+   Mobile remains unchanged
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+  /* ALL legacy page wrappers */
+  .faq-page,
+  .source-style-page {
+    width: 100% !important;
+    max-width: none !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+
+  /* ALL page headers */
+  .faq-header {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    box-sizing: border-box !important;
+  }
+
+  /* Contact page had an explicit 430px max-width */
+  .faq-header[style],
+  .faq-page .faq-header {
+    width: 100vw !important;
+    max-width: none !important;
+    left: auto !important;
+    right: auto !important;
+  }
+
+  /* HOME */
+  .d2-booking-stage {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+    box-sizing: border-box !important;
+  }
+
+}
+/* =========================================================
+   FINAL DESKTOP HEADER POSITION FIX
+   Left menu | Center logo | Right login
+   ========================================================= */
+
+@media (min-width: 768px) {
+
+  .faq-header {
+    width: 100vw !important;
+    max-width: none !important;
+    margin-left: calc(50% - 50vw) !important;
+    margin-right: calc(50% - 50vw) !important;
+
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+
+    position: relative !important;
+    box-sizing: border-box !important;
+  }
+
+  /* LEFT */
+  .faq-header-menu {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 0 !important;
+    flex: 0 0 40px !important;
+  }
+
+  /* CENTER */
+  .faq-header-brand {
+    position: absolute !important;
+    left: 50% !important;
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    margin: 0 !important;
+  }
+
+  /* RIGHT */
+  .faq-header-cta-right {
+    position: relative !important;
+    left: auto !important;
+    right: auto !important;
+    margin: 0 0 0 auto !important;
+    flex: 0 0 auto !important;
+  }
+
+}

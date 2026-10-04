@@ -35,7 +35,90 @@ export default function LegacyPage({ html, cssHref, jsSrc }) {
     link.href = cssHref;
     link.dataset.legacyPage = jsSrc;
     document.head.appendChild(link);
+        // Final common scroll rules.
+    // This is intentionally loaded AFTER each legacy page CSS so
+    // About/Services/Contact/FAQ/etc. cannot override page scrolling.
+    const scrollStyle = document.createElement('style');
+    scrollStyle.dataset.legacyScrollFix = 'true';
+    scrollStyle.textContent = `
+      html {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        height: auto !important;
+        overflow-x: hidden;
+        overflow-y: auto;
+        overscroll-behavior-y: auto;
+        scroll-behavior: auto;
+      }
 
+      body {
+        width: 100%;
+        max-width: 100%;
+        min-height: 100%;
+        height: auto !important;
+        margin: 0;
+        overflow-x: hidden;
+        overflow-y: visible;
+        overscroll-behavior-y: auto;
+        scroll-behavior: auto;
+      }
+
+      #root {
+        min-height: 100vh;
+        height: auto !important;
+        overflow: visible;
+      }
+          /* =========================================================
+       FINAL DESKTOP HEADER - FULL VIEWPORT
+       Loaded after every legacy page CSS so page CSS
+       cannot constrain the header.
+       ========================================================= */
+
+     @media (min-width: 768px) {
+
+      .faq-header {
+        width: 100vw !important;
+        max-width: none !important;
+        margin-left: calc(50% - 50vw) !important;
+        margin-right: calc(50% - 50vw) !important;
+
+        display: flex !important;
+        align-items: center !important;
+        justify-content: space-between !important;
+
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+
+        box-sizing: border-box !important;
+      }
+
+      .faq-header-menu {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        margin: 0 !important;
+        flex: 0 0 40px !important;
+      }
+
+      .faq-header-brand {
+        position: absolute !important;
+        left: 50% !important;
+        top: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        margin: 0 !important;
+      }
+
+      .faq-header-cta-right {
+        position: relative !important;
+        left: auto !important;
+        right: auto !important;
+        margin: 0 0 0 auto !important;
+        flex: 0 0 auto !important;
+      }
+     }
+    `;
+    document.head.appendChild(scrollStyle);
   
     // Remove a stale copy if a previous route transition left one behind.
     document.querySelectorAll(`script[data-legacy-page="${jsSrc}"]`).forEach((oldScript) => oldScript.remove());
@@ -78,7 +161,11 @@ export default function LegacyPage({ html, cssHref, jsSrc }) {
       // stays scroll-locked forever, even after returning to this page.
       // Force it back to normal every time we leave a legacy page so that
       // never happens.
+      document.documentElement.style.overflow = '';
+      document.documentElement.style.overflowY = '';
       document.body.style.overflow = '';
+      document.body.style.overflowY = '';
+      scrollStyle.remove();
     };
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [cssHref, jsSrc]);
