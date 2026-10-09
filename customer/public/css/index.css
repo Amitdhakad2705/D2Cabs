@@ -8486,12 +8486,13 @@ body {
 #d2Homepage .d2-cab-scroll {
   display: grid !important;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  grid-auto-flow: row !important;
+  grid-auto-columns: auto !important;
   gap: 12px !important;
   overflow: visible !important;
   width: 100% !important;
   box-sizing: border-box !important;
 }
-
 #d2Homepage .d2-cab {
   width: auto !important;
   min-width: 0 !important;
