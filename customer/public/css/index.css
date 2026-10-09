@@ -8482,7 +8482,8 @@ body {
   }
 
 }
-/* D2Cabs: fix cab card layout on live website */
+
+/* D2Cabs: fix cab card layout on live website
 #d2Homepage .d2-cab-scroll {
   display: grid !important;
   grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
@@ -8510,4 +8511,4 @@ body {
   #d2Homepage .d2-cab-scroll {
     grid-template-columns: minmax(0, 1fr) !important;
   }
-}
+} */
